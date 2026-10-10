@@ -1,0 +1,64 @@
+:root {
+  --font-geist-sans: var(--font-ai-display), "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-geist-mono: var(--font-ai-mono), "SFMono-Regular", Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+  font-feature-settings: "ss01" 1, "ss02" 1, "liga" 1;
+}
+
+.hero-v2 h1,
+.title-row h2,
+.vision-main h2,
+.join-inner h2 {
+  font-family: var(--font-ai-display), "PingFang SC", sans-serif;
+  font-weight: 600;
+  letter-spacing: -.065em;
+}
+
+.hero-v2 h1 {
+  font-variation-settings: "wght" 610;
+}
+
+.brand,
+.research-tabs button b,
+.research-copy h3,
+.system-center strong,
+.team-info h3 {
+  font-family: var(--font-ai-display), "PingFang SC", sans-serif;
+}
+
+.eyebrow,
+.kicker,
+.hero-no,
+.hero-bottom,
+.data-line,
+.research-copy small,
+.art-meta,
+.system-node,
+.team-info > small,
+.team-tags b,
+.footer-v2 > small {
+  font-family: var(--font-ai-mono), monospace;
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+.kicker,
+.eyebrow,
+.team-info > small,
+.team-tags b {
+  letter-spacing: .16em;
+}
+
+.team-info h3 {
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+
+.research-tabs button b,
+.team-portrait strong,
+.art-shape strong {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "ss01" 1, "zero" 1;
+}

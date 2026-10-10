@@ -1,0 +1,6 @@
+@media (max-width: 900px) {
+  .site-v2 {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,137 @@
+/* One-stage, three-scene H5 scroll story for the Systems chapter */
+.systems-v2 {
+  padding: 0 4vw;
+  overflow: visible;
+  background: #061f17;
+}
+
+.systems-v2 > .system-overview,
+.systems-v2 > .project-chapter {
+  position: sticky;
+  top: 84px;
+  height: calc(100svh - 84px);
+  min-height: 640px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.systems-v2 > .system-overview {
+  z-index: 1;
+  margin: 0 -4vw;
+  padding: 7vh 4vw 4vh;
+  background: #061f17;
+}
+
+.systems-v2 > .eax-chapter {
+  z-index: 2;
+}
+
+.systems-v2 > .scientist-chapter {
+  z-index: 3;
+}
+
+.systems-v2 .project-chapter {
+  margin: 0 -4vw;
+  padding-top: 8vh;
+  padding-bottom: 5vh;
+  box-shadow: 0 -35px 90px #0008;
+}
+
+.system-overview .title-row {
+  margin-bottom: 2vh;
+}
+
+.system-overview .title-row h2 {
+  font-size: clamp(52px, 6vw, 90px);
+}
+
+.system-overview .title-row > p {
+  font-size: 16px;
+}
+
+.system-overview .kicker {
+  margin-bottom: 16px;
+}
+
+.system-overview .system-map {
+  height: 43vh;
+  min-height: 330px;
+  max-height: 470px;
+  margin: 0 auto 2vh;
+}
+
+.system-overview .system-center {
+  width: 220px;
+  height: 220px;
+}
+
+.system-overview .system-ring {
+  width: 390px;
+  height: 390px;
+}
+
+.system-overview .system-ring.r2 {
+  width: 570px;
+  height: 390px;
+}
+
+.system-overview .system-stack > div {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.system-overview .system-stack b {
+  margin: 15px 0 8px;
+}
+
+@supports (animation-timeline: view()) {
+  .systems-v2 > .project-chapter {
+    animation: h5-scene-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+    transform-origin: 50% 100%;
+  }
+}
+
+@keyframes h5-scene-in {
+  from {
+    opacity: .35;
+    transform: translateY(12vh) scale(.92);
+    clip-path: inset(18% 5% 0 round 28px 28px 0 0);
+    filter: saturate(.55) blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0 round 0);
+    filter: none;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 901px) {
+  .systems-v2 > .system-overview,
+  .systems-v2 > .project-chapter {
+    min-height: 590px;
+  }
+  .system-overview .title-row { margin-bottom: 0; }
+  .system-overview .system-map { height: 39vh; min-height: 285px; }
+  .project-copy p { font-size: 14px; line-height: 1.65; }
+  .project-copy h3 { font-size: clamp(52px, 6vw, 88px); }
+  .eax-visual,.scientist-visual { min-height: 500px; }
+  .workflow-orbit,.science-field { width: min(39vw,470px); }
+}
+
+@media (max-width: 900px) {
+  .systems-v2 { padding: 0; overflow: hidden; }
+  .systems-v2 > .system-overview,
+  .systems-v2 > .project-chapter {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: auto;
+    min-height: 100svh;
+    margin: 0;
+  }
+  .systems-v2 > .system-overview { padding: 11vh 5vw; }
+  .systems-v2 .project-chapter { margin: 0; padding: 11vh 6vw; }
+}
