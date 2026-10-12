@@ -1,0 +1,8 @@
+:root {
+  --font-ai-display: "Space Grotesk", "PingFang SC", sans-serif;
+  --font-ai-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  min-width: 320px;
+}
