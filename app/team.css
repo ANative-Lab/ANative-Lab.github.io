@@ -1,1 +1,176 @@
-.team-grid{max-width:1360px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.team-card{background:#fff;border:1px solid #d9e6df;min-width:0;transition:transform .35s,box-shadow .35s}.team-card:hover{transform:translateY(-7px);box-shadow:0 22px 60px #083d2518}.team-card.lead{grid-column:1/-1;display:grid;grid-template-columns:.72fr 1.28fr}.team-portrait{aspect-ratio:1;height:auto;position:relative;overflow:hidden;background:radial-gradient(circle at 34% 34%,#159064 0,#0b4a35 34%,#061c14 72%);color:#fff;padding:25px}.team-card.lead .team-portrait{height:auto;min-height:450px}.team-portrait>img{position:absolute;z-index:2;left:4%;top:4%;width:66.666%;height:66.666%;object-fit:cover;object-position:center;border-radius:50%;border:2px solid #94f5cc;box-shadow:0 18px 45px #02110bcc,0 0 0 8px #4bf0a812}.team-portrait:before{content:"";position:absolute;z-index:1;inset:0;background-image:linear-gradient(#fff0 1px,transparent 1px),linear-gradient(90deg,#fff0 1px,transparent 1px);background-size:36px 36px}.team-portrait span{position:absolute;z-index:3;right:7%;top:7%;font:9px var(--font-geist-mono);letter-spacing:.14em;color:#b8f5d9}.team-portrait strong{position:absolute;z-index:3;left:8%;bottom:7%;font-size:clamp(48px,5vw,82px);line-height:.75;letter-spacing:-.08em;color:#effff7;-webkit-text-stroke:0;text-shadow:0 2px 20px #03130d}.team-portrait i{position:absolute;z-index:1;width:43%;height:43%;border:1px solid #6ee4b288;border-radius:50%;right:-7%;bottom:8%;top:auto;box-shadow:0 0 55px #2ce39533}.team-card.lead .team-portrait i{width:48%;height:48%;right:-5%;bottom:7%;top:auto}.team-info{padding:36px;display:flex;flex-direction:column;min-height:430px}.team-card.lead .team-info{padding:8%;min-height:450px}.team-info>small{font:11px var(--font-geist-mono);letter-spacing:.14em;color:#11965f;text-transform:uppercase}.team-info h3{font-size:clamp(34px,3vw,54px);letter-spacing:-.055em;margin:22px 0 5px}.team-card.lead .team-info h3{font-size:clamp(48px,5vw,76px)}.team-info h4{margin:0;color:#19875e;font-size:13px;font-weight:500}.team-info p{font-size:14px;line-height:1.8;color:#596a61;margin:27px 0}.team-card.lead .team-info p{font-size:16px;max-width:720px}.team-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px}.team-tags b{font:10px var(--font-geist-mono);letter-spacing:.08em;color:#147a54;border:1px solid #b8dccc;padding:8px 11px}.team-info>a{color:#092016;text-decoration:none;font-size:12px;font-weight:650;margin-top:auto;padding-top:18px;border-top:1px solid #d7e3dc;display:flex;justify-content:space-between}@media(max-width:1000px){.team-grid{grid-template-columns:1fr 1fr}.team-card.lead{grid-column:1/-1}}@media(max-width:650px){.team-grid{grid-template-columns:1fr}.team-card.lead{display:block}.team-card.lead .team-portrait{min-height:330px}.team-card.lead .team-info{min-height:430px}.team-info{padding:30px}.team-portrait{aspect-ratio:1;height:auto}}
+/* People only: compact academic profiles, with no decorative portrait panels. */
+.people-v2 .team-grid {
+  max-width: 1360px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.people-v2 .team-card {
+  min-width: 0;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #d9e6df;
+  display: flex;
+  flex-direction: column;
+}
+
+.people-v2 .team-card.lead {
+  grid-column: 1 / -1;
+  padding: 32px;
+}
+
+.people-v2 .team-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.people-v2 .team-avatar {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 1px solid #d9e6df;
+}
+
+.people-v2 .lead .team-avatar {
+  width: 112px;
+  height: 112px;
+}
+
+.people-v2 .team-identity {
+  min-width: 0;
+}
+
+.people-v2 .team-identity h3 {
+  margin: 0;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -.03em;
+  overflow-wrap: anywhere;
+}
+
+.people-v2 .lead .team-identity h3 {
+  font-size: clamp(28px, 2.6vw, 38px);
+}
+
+.people-v2 .team-name-secondary {
+  margin: 6px 0 0;
+  color: #53695e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.people-v2 .team-role {
+  margin: 8px 0 0;
+  color: #147a54;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.people-v2 .team-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 20px;
+}
+
+.people-v2 .team-bio {
+  margin: 0 0 20px;
+  color: #465d51;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.people-v2 .lead .team-bio {
+  max-width: 85ch;
+}
+
+.people-v2 .team-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.people-v2 .team-tags b {
+  padding: 4px 8px;
+  background: #f0f6f2;
+  color: #31604a;
+  font: 500 10px/1.5 var(--font-geist-sans);
+  letter-spacing: .03em;
+  overflow-wrap: anywhere;
+}
+
+.people-v2 .team-info > a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #e1eae5;
+  color: #147a54;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.people-v2 .team-info > a:hover {
+  color: #082f1e;
+  text-decoration: underline;
+}
+
+.people-v2 .team-info > a:focus-visible {
+  outline: 2px solid #147a54;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .people-v2 .team-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .people-v2 .team-card,
+  .people-v2 .team-card.lead {
+    padding: 20px;
+  }
+
+  .people-v2 .team-heading {
+    gap: 16px;
+  }
+
+  .people-v2 .team-avatar,
+  .people-v2 .lead .team-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .people-v2 .team-identity h3,
+  .people-v2 .lead .team-identity h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .people-v2 .team-heading {
+    gap: 12px;
+  }
+
+  .people-v2 .team-avatar,
+  .people-v2 .lead .team-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .people-v2 .team-identity h3,
+  .people-v2 .lead .team-identity h3 {
+    font-size: 22px;
+  }
+}
