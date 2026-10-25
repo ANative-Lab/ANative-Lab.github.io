@@ -1,7 +1,6 @@
 # ANative Lab website
 
-Local migration of the website from `mengzaiqiao/ANative` into
-`ANative-Lab/ANative-Lab.github.io`.
+Source of the ANative Lab website, served at `https://anative-lab.github.io/`.
 
 ## Develop and build
 
@@ -34,9 +33,9 @@ been removed.
 
 `.github/workflows/deploy-pages.yml` builds and deploys pushes to `main`.
 The repository's Settings → Pages → Source must use **GitHub Actions**.
-The website uses the default address `https://anative-lab.github.io/`; the
-source website's `anative.ai` custom domain is intentionally not migrated.
-The existing source repository and its live site have not been changed.
+With "Deploy from a branch", GitHub also runs a Jekyll build of the repository
+root on every push, and whichever deployment finishes last wins: the site may
+then show this README instead of the built pages.
 
-Migration source commit: `b2e7cb82336a20fffce6c29c38cdd4ad359758e3`.
-The destination's existing Apache-2.0 `LICENSE` is retained.
+The website uses the default address `https://anative-lab.github.io/` with no
+custom domain.
