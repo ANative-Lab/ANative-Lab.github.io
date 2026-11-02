@@ -4,11 +4,12 @@ import test from "node:test";
 
 const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
 const styles = await readFile(new URL("../app/redesign.css", import.meta.url), "utf8");
-const routes = ["home", "research", "systems", "vision", "people", "activities", "join"];
+const routes = ["home", "research", "systems", "vision", "people", "workshops", "talks", "join"];
 
 test("primary navigation uses independent HTML documents", async () => {
   for (const route of routes) {
-    assert.ok(page.includes(`["${route}"`), `${route} route is present in the navigation`);
+    const subpage = route === "workshops" || route === "talks";
+    assert.ok(page.includes(subpage ? `href={routeHref("${route}")}` : `["${route}"`), `${route} route is present in the navigation`);
     const file = route === "home" ? "index" : route;
     const html = await readFile(new URL(`../github-pages/${file}.html`, import.meta.url), "utf8");
     assert.match(html, /main\.tsx/);
@@ -22,27 +23,17 @@ test("primary navigation uses independent HTML documents", async () => {
   assert.doesNotMatch(page, /hashchange|navigate\(/);
 });
 
-test("Activities lists Workshops before Talks with matching numbering and descriptions", async () => {
-  assert.match(page, /page==="activities"&&<ActivitiesPanel/);
-  assert.match(page, /<h2>Talks<\/h2>/);
-  assert.match(page, /<h2>Workshops<\/h2>/);
-  assert.match(page, /No upcoming talks/);
-  assert.match(page, /No upcoming workshops/);
-  assert.match(styles, /\.activities-page/);
-  const panel = page.slice(page.indexOf("function ActivitiesPanel"), page.indexOf("const pageNames"));
-  assert.match(panel, /<span>01<\/span><h2>Workshops<\/h2>/);
-  assert.match(panel, /<span>02<\/span><h2>Talks<\/h2>/);
-  assert.ok(panel.indexOf("<h2>Workshops</h2>") < panel.indexOf("<h2>Talks</h2>"));
-  const groups = panel.split('<div className="activity-group">').slice(1);
-  assert.equal(groups.length, 2);
-  assert.match(groups[0], /Focused workshops and hands-on sessions/);
-  assert.match(groups[0], /No upcoming workshops/);
-  assert.match(groups[1], /Research talks and seminars/);
-  assert.match(groups[1], /No upcoming talks/);
-  assert.match(panel, /实验室的专题研讨会与学术报告。/);
-  assert.match(panel, /Workshops and talks from ANative Lab\./);
-  const html = await readFile(new URL("../github-pages/activities.html", import.meta.url), "utf8");
-  assert.match(html, /content="Workshops and talks from ANative Lab\."/);
+test("Activities is a disclosure with independent pages and a legacy redirect", async () => {
+  assert.doesNotMatch(page, /ActivitiesPanel|Back to Activities|routeHref\("activities"\)/);
+  assert.match(page, /aria-expanded=\{open\}/);
+  assert.match(page, /aria-controls="activities-submenu"/);
+  assert.match(page, /onPointerEnter=\{event=>\{if\(event\.pointerType==="mouse"/);
+  const menu = page.slice(page.indexOf("function ActivitiesMenu"), page.indexOf("function ActivityDetailPanel"));
+  assert.ok(menu.indexOf(">Workshops</a>") < menu.indexOf(">Talks</a>"));
+  const html = await readFile(new URL("../dist-pages/activities.html", import.meta.url), "utf8");
+  assert.match(html, /http-equiv="refresh" content="0;url=workshops.html"/);
+  assert.match(page, /page==="workshops"&&<ActivityDetailPanel kind="workshops"/);
+  assert.match(page, /page==="talks"&&<TalksArchive/);
 });
 
 test("navigation highlighting and page entry motion are available", () => {
