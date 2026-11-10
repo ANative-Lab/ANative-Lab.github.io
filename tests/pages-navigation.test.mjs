@@ -32,8 +32,25 @@ test("Activities is a disclosure with independent pages and a legacy redirect", 
   assert.ok(menu.indexOf(">Workshops</a>") < menu.indexOf(">Talks</a>"));
   const html = await readFile(new URL("../dist-pages/activities.html", import.meta.url), "utf8");
   assert.match(html, /http-equiv="refresh" content="0;url=workshops.html"/);
-  assert.match(page, /page==="workshops"&&<ActivityDetailPanel kind="workshops"/);
+  assert.match(page, /page==="workshops"&&<WorkshopsPreview/);
   assert.match(page, /page==="talks"&&<TalksArchive/);
+});
+
+test("conference page is linked from Workshops and keeps unconfirmed details pending", async () => {
+  const [preview, conference, html] = await Promise.all([
+    readFile(new URL("../app/workshops.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/conference.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../dist-pages/conference.html", import.meta.url), "utf8"),
+  ]);
+  assert.match(preview, /href="\/conference\.html"/);
+  assert.match(preview, /21 December 2026/);
+  assert.match(conference, /Organizer & Guests/);
+  assert.match(conference, /Huazhong University of Science and Technology/);
+  assert.match(conference, /Not open yet/);
+  assert.match(html, /assets\/conference-[^" ]+\.js/);
+  for (const file of ["iadh-ounis.jpg", "ke-yuan.jpg", "zhaochun-ren.jpeg", "zhaohan-meng.jpg"]) {
+    await access(new URL(`../dist-pages/conference/${file}`, import.meta.url));
+  }
 });
 
 test("navigation highlighting and page entry motion are available", () => {

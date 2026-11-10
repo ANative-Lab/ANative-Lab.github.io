@@ -1,0 +1,48 @@
+.workshops-page{position:relative;z-index:1;min-height:calc(100svh - 84px);padding:124px 5vw 76px;background:#07130f;color:#f3f7f2}
+.workshops-inner{max-width:1200px;margin:0 auto}
+.workshops-breadcrumb{margin:0 0 11px;color:#a0b9aa;font-size:12px}
+.workshops-breadcrumb span{margin:0 9px;color:#7f9e8c}
+.workshops-intro{padding-bottom:28px;border-bottom:1px solid #294034}
+.workshops-intro h1{max-width:none;margin:0 0 12px;font:500 46px/1.1 var(--font-ai-display),Arial,sans-serif;letter-spacing:0}
+.workshops-intro>p:last-child{margin:0;color:#b2c3b9;font-size:16px;line-height:1.6}
+.workshop-event{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(255px,.65fr);gap:7vw;padding:32px 0 35px;border-bottom:1px solid #294034}
+.workshop-event-main{min-width:0}
+.workshop-event-label{display:flex;flex-wrap:wrap;gap:10px 22px;color:#83d9a6;font:10px/1.5 var(--font-ai-mono),monospace;letter-spacing:.1em}
+.workshop-event-label span:last-child{color:#90af9c}
+.workshop-event h2{max-width:720px;margin:18px 0 14px;font:500 42px/1.15 var(--font-ai-display),Arial,sans-serif;letter-spacing:0;overflow-wrap:break-word}
+.workshop-theme{max-width:650px;margin:0 0 21px;color:#a8e4bd;font-size:17px;line-height:1.5}
+.workshop-description{max-width:660px;margin:0;color:#aebfb4;font-size:14px;line-height:1.75}
+.workshop-conference-link{display:inline-flex;align-items:center;gap:20px;margin-top:24px;padding:11px 15px;border:1px solid #74bb91;border-radius:4px;color:#e8f8ec;text-decoration:none;font-size:13px;font-weight:600;transition:background .2s,color .2s}
+.workshop-conference-link:hover,.workshop-conference-link:focus-visible{background:#a5e0b7;color:#0a241b}
+.workshop-facts{align-self:start;margin:0;border-top:1px solid #365545}
+.workshop-facts>div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid #365545}
+.workshop-facts dt{color:#83d9a6;font:10px/1.5 var(--font-ai-mono),monospace;letter-spacing:.08em}
+.workshop-facts dd{margin:0;color:#d8e6dd;font-size:13px;line-height:1.5}
+.workshop-topics{padding-top:31px}
+.workshop-topics-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}
+.workshop-topics-heading p{margin:0;color:#83d9a6;font:10px/1.5 var(--font-ai-mono),monospace;letter-spacing:.1em}
+.workshop-topics-heading h2{margin:10px 0 0;font:500 24px/1.25 var(--font-ai-display),Arial,sans-serif;letter-spacing:0}
+.workshop-topics-heading>span{color:#91ab9a;font-size:12px}
+.workshop-topics-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #365545}
+.workshop-topics-grid>div{min-width:0;min-height:139px;padding:19px 30px 20px 0;border-bottom:1px solid #365545}
+.workshop-topics-grid>div:nth-child(even){padding-left:30px;border-left:1px solid #365545}
+.workshop-topics-grid span{color:#83d9a6;font:10px/1.5 var(--font-ai-mono),monospace}
+.workshop-topics-grid h3{margin:11px 0 6px;font:500 18px/1.35 var(--font-ai-display),Arial,sans-serif;letter-spacing:0;overflow-wrap:break-word}
+.workshop-topics-grid p{max-width:440px;margin:0;color:#a8bdae;font-size:12px;line-height:1.6}
+.workshop-questions{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.45fr);gap:50px;padding:36px 0 31px;border-bottom:1px solid #365545}
+.workshop-questions-heading>p,.workshop-formats>div>span{margin:0;color:#83d9a6;font:10px/1.5 var(--font-ai-mono),monospace;letter-spacing:.1em}
+.workshop-questions-heading h2{margin:12px 0 8px;font:500 24px/1.3 var(--font-ai-display),Arial,sans-serif;letter-spacing:0}
+.workshop-questions-heading>span{color:#91ab9a;font-size:12px}
+.workshop-questions ol{margin:0;padding:0;list-style:none;border-top:1px solid #365545}
+.workshop-questions li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;align-items:start;padding:13px 0;border-bottom:1px solid #365545}
+.workshop-questions li>span{color:#83d9a6;font:10px/1.8 var(--font-ai-mono),monospace}
+.workshop-questions li p{max-width:680px;margin:0;color:#d9e8de;font-size:14px;line-height:1.55}
+.workshop-formats{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.45fr);gap:50px;padding:28px 0 0}
+.workshop-formats p{max-width:330px;margin:10px 0 0;color:#a9bcaf;font-size:12px;line-height:1.6}
+.workshop-formats ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:0;padding:0;list-style:none}
+.workshop-formats li{display:flex;flex-direction:column;gap:15px;padding:11px 0;border-top:1px solid #365545;color:#e4efe7;font-size:13px;line-height:1.4}
+.workshop-formats li span{color:#83d9a6;font:10px/1.5 var(--font-ai-mono),monospace}
+@media(max-width:900px){.workshop-event{grid-template-columns:1fr;gap:26px}.workshop-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:25px}.workshop-questions,.workshop-formats{gap:25px}}
+@media(max-width:700px){.workshops-page{padding:106px 22px 58px}.workshops-intro h1{font-size:38px}.workshops-intro>p:last-child{font-size:14px}.workshop-event{padding:29px 0 34px}.workshop-event h2{font-size:31px}.workshop-theme{font-size:15px}.workshop-description{font-size:13px}.workshop-topics{padding-top:29px}.workshop-topics-grid h3{font-size:15px}.workshop-topics-grid p{font-size:11px}.workshop-topics-grid>div{min-height:150px;padding-right:15px}.workshop-topics-grid>div:nth-child(even){padding-left:15px}.workshop-questions,.workshop-formats{grid-template-columns:1fr;gap:19px;padding-top:29px}.workshop-questions li p{font-size:13px}}
+@media(max-width:480px){.workshop-facts{display:block}.workshop-topics-grid>div{min-height:0;padding:17px 12px 20px 0}.workshop-topics-grid>div:nth-child(even){padding-left:12px}.workshop-topics-heading>span{max-width:100px;text-align:right;font-size:11px}.workshop-formats ul{gap:9px}.workshop-formats li{font-size:11px}}
+@media(max-width:360px){.workshops-page{padding-left:16px;padding-right:16px}.workshop-event h2{font-size:27px}}

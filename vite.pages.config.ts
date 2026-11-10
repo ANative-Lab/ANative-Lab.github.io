@@ -21,6 +21,7 @@ export default defineConfig({
         people: path.join(projectRoot, "github-pages/people.html"),
         activities: path.join(projectRoot, "github-pages/activities.html"),
         workshops: path.join(projectRoot, "github-pages/workshops.html"),
+        conference: path.join(projectRoot, "github-pages/conference.html"),
         talks: path.join(projectRoot, "github-pages/talks.html"),
         join: path.join(projectRoot, "github-pages/join.html"),
       },
