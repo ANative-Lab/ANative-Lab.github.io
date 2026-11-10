@@ -1,0 +1,33 @@
+.teaching-page{position:relative;z-index:1;min-height:calc(100svh - 84px);padding:132px 5vw 88px;background:#07130f;color:#f3f7f2}
+.teaching-inner{max-width:1200px;margin:0 auto}
+.teaching-kicker,.teaching-label{color:#85d5a4;font:10px/1.5 var(--font-ai-mono),monospace;letter-spacing:.14em}
+.teaching-intro{padding-bottom:36px;border-bottom:1px solid #355244}
+.teaching-intro h1{max-width:none;margin:14px 0 15px;font:500 52px/1.05 var(--font-ai-display),Arial,sans-serif;letter-spacing:0}
+.teaching-intro p{margin:0;color:#b2c5b7;font-size:15px;line-height:1.6}
+.teaching-event-heading{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);gap:7vw;padding:33px 0 42px;border-bottom:1px solid #355244}
+.teaching-event-copy h2{max-width:740px;margin:15px 0 8px;font:500 clamp(30px,4vw,52px)/1.13 var(--font-ai-display),Arial,sans-serif;letter-spacing:0}
+.teaching-course{margin:0;color:#b8dbc6;font-size:14px}
+.teaching-description{max-width:690px;margin:25px 0 0;color:#b3c6b9;font-size:15px;line-height:1.7}
+.teaching-facts{margin:0;border-top:1px solid #355244}
+.teaching-facts>div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:15px;padding:15px 0;border-bottom:1px solid #355244}
+.teaching-facts dt{color:#85d5a4;font:10px/1.5 var(--font-ai-mono),monospace;letter-spacing:.1em}
+.teaching-facts dd{margin:0;color:#dce8df;font-size:13px;line-height:1.55}
+.teaching-video-block{padding-top:31px}
+.teaching-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.teaching-section-heading h3{margin:0;font:500 22px/1.3 var(--font-ai-display),Arial,sans-serif;letter-spacing:0}
+.teaching-section-heading>span{color:#8eaf9a;font:10px/1.4 var(--font-ai-mono),monospace;letter-spacing:.12em}
+.teaching-video-block video{display:block;width:100%;max-height:640px;aspect-ratio:16/9;background:#0f2118;border:1px solid #426750;border-radius:4px;object-fit:contain}
+.teaching-video-block>p{margin:10px 0 0;color:#91aa9a;font-size:12px}
+.teaching-gallery-block{margin-top:42px}
+.teaching-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.teaching-gallery figure{min-width:0;margin:0}
+.teaching-gallery figure>a{display:block;overflow:hidden;border-radius:3px}
+.teaching-gallery img{display:block;width:100%;height:205px;object-fit:cover;object-position:center 42%;border:1px solid #426750;border-radius:3px;background:#14241c}
+.teaching-gallery figure>a:hover img{border-color:#87efb2}
+.teaching-gallery figure>a:focus-visible{outline:2px solid #4bf0a8;outline-offset:4px}
+.teaching-gallery figcaption{display:flex;gap:10px;margin-top:9px;color:#a8bcad;font-size:11px;line-height:1.4}
+.teaching-gallery figcaption span{color:#81d6a4;font-family:var(--font-ai-mono),monospace}
+@media(max-width:900px){.teaching-event-heading{grid-template-columns:1fr;gap:30px}.teaching-facts{max-width:600px}.teaching-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.teaching-page{padding:112px 22px 60px}.teaching-intro h1{font-size:42px}.teaching-intro p,.teaching-description{font-size:14px}.teaching-event-heading{padding:26px 0 34px}.teaching-video-block video{max-height:none}.teaching-gallery img{height:190px}}
+@media(max-width:480px){.teaching-gallery{gap:18px 12px}.teaching-gallery img{height:145px}.teaching-gallery figcaption{font-size:10px}}
+@media(max-width:360px){.teaching-page{padding-left:16px;padding-right:16px}.teaching-gallery img{height:120px}.teaching-facts>div{grid-template-columns:60px minmax(0,1fr)}}

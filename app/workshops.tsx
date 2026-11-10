@@ -33,10 +33,10 @@ export default function WorkshopsPreview({zh}: {zh: boolean}) {
       <article className="workshop-event" aria-labelledby="workshop-event-title">
         <div className="workshop-event-main">
           <div className="workshop-event-label"><span>01 / {zh ? "筹备中" : "IN PLANNING"}</span><span>ANATIVE LAB · 2026</span></div>
-          <h2 id="workshop-event-title">{zh ? "ANative 2026 国际学术研讨会" : "ANative 2026 International Workshop"}</h2>
+          <h2 id="workshop-event-title">{zh ? "ANative 2026 学术研讨会" : "ANative 2026 Workshop"}</h2>
           <p className="workshop-theme">{zh ? "智能体原生科研：多智能体协同与科学发现" : "Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery"}</p>
           <p className="workshop-description">{zh ? "围绕智能体如何获取知识、协同推理并执行研究任务，探讨从模型输出到可验证科学发现的路径。" : "Exploring how agents acquire knowledge, reason together, and carry out research tasks, from model outputs to verifiable scientific discovery."}</p>
-          <a className="workshop-conference-link" href="/conference.html">{zh ? "查看会议专题" : "Explore the conference"}<span aria-hidden="true">↗</span></a>
+          <a className="workshop-conference-link" href="/conference.html">{zh ? "查看研讨会详情" : "Explore the workshop"}<span aria-hidden="true">↗</span></a>
         </div>
         <dl className="workshop-facts">
           <div><dt>{zh ? "日期" : "DATE"}</dt><dd>{zh ? "2026年12月21日" : "21 December 2026"}</dd></div>

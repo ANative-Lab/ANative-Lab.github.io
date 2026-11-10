@@ -5,9 +5,9 @@ import "./conference.css";
 
 const people = [
   {
-    name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Organizer", roleZh: "会议发起人",
-    title: "Professor, Huazhong University of Science and Technology · Founder, TaoX AI",
-    titleZh: "华中科技大学教授、博士生导师 · TaoX AI 创始人",
+    name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Guest", roleZh: "参会嘉宾",
+    title: "Professor, Huazhong University of Science and Technology",
+    titleZh: "华中科技大学教授",
     bio: "Researches LLM agents, multi-agent collaboration, self-evolution, and systems for autonomous scientific discovery.",
     bioZh: "研究大语言模型智能体、多智能体协同与自进化，以及面向自主科学发现的智能系统。",
     photo: "/team/zaiqiao.webp", url: "https://mengzaiqiao.howone.app/",
@@ -15,15 +15,15 @@ const people = [
   {
     name: "Iadh Ounis", nameZh: "Iadh Ounis", role: "Guest", roleZh: "参会嘉宾",
     title: "Professor of Information Retrieval · Head of School of Computing Science, University of Glasgow",
-    titleZh: "格拉斯哥大学信息检索教授 · 计算机科学学院院长",
+    titleZh: "格拉斯哥大学信息检索教授、计算机科学学院院长",
     bio: "Works on information retrieval, recommender systems, and large-scale search, including the Terrier research platform.",
     bioZh: "研究信息检索、推荐系统和大规模搜索技术，领导 Terrier 研究团队。",
     photo: "/conference/iadh-ounis.jpg", url: "https://www.gla.ac.uk/schools/computing/staff/iadhounis/",
   },
   {
     name: "Ke Yuan", nameZh: "Ke Yuan", role: "Guest", roleZh: "参会嘉宾",
-    title: "Reader, University of Glasgow · Group Leader, CRUK Scotland Institute",
-    titleZh: "格拉斯哥大学 Reader · CRUK Scotland Institute 研究组负责人",
+    title: "Reader, University of Glasgow",
+    titleZh: "格拉斯哥大学 Reader",
     bio: "Applies machine learning to computational pathology, cancer evolution, and biomedical research.",
     bioZh: "利用机器学习、病理图像和基因组数据研究癌症演化及生物医学问题。",
     photo: "/conference/ke-yuan.jpg", url: "https://www.gla.ac.uk/schools/cancersciences/staff/keyuan/",
@@ -38,8 +38,8 @@ const people = [
   },
   {
     name: "Xi Zhang", nameZh: "张曦", role: "Guest", roleZh: "参会嘉宾",
-    title: "Founder, EvoScientist · Chief Scientist, ANative Lab",
-    titleZh: "EvoScientist 创始人 · ANative Lab 首席科学家",
+    title: "PhD Researcher, University of Glasgow",
+    titleZh: "格拉斯哥大学博士研究生",
     bio: "Builds self-evolving agents and automated research systems that learn alongside human scientists.",
     bioZh: "研究自进化智能体与自动科研系统，构建能够与研究者共同进化的 AI 科学家。",
     photo: "/team/xi.webp", url: "https://x-izhang.github.io/",
@@ -52,7 +52,82 @@ const people = [
     bioZh: "研究面向科学发现的智能体、生物医学 AI，以及知识驱动的药物发现。",
     photo: "/conference/zhaohan-meng.jpg", url: "https://zhaohanm.github.io/",
   },
+  {
+    name: "Qiang Zhang", nameZh: "张强", role: "Guest", roleZh: "参会嘉宾",
+    title: "Assistant Professor, Zhejiang University",
+    titleZh: "浙江大学国际联合学院长聘教轨助理教授",
+    bio: "Studies large models, agents, knowledge graphs, and AI for molecular and protein research.",
+    bioZh: "研究大模型、智能体、知识图谱，以及面向分子与蛋白质研究的人工智能。",
+    photo: "/conference/qiang-zhang.jpg", url: "https://person.zju.edu.cn/zhangqiang",
+  },
+  {
+    name: "Fajie Yuan", nameZh: "Fajie Yuan", role: "Guest", roleZh: "参会嘉宾",
+    title: "Assistant Professor, Westlake University",
+    titleZh: "西湖大学助理教授",
+    bio: "Develops protein language models and AI methods for life science.",
+    bioZh: "研究蛋白质语言模型与面向生命科学的人工智能方法。",
+    photo: "/conference/fajie-yuan.jpg", url: "https://en.westlake.edu.cn/faculty/fajie-yuan.html",
+  },
+  {
+    name: "Peijie Zhou", nameZh: "周沛劼", role: "Guest", roleZh: "参会嘉宾",
+    title: "Assistant Professor, Peking University",
+    titleZh: "北京大学助理教授",
+    bio: "Studies computational systems biology and single-cell models of complex biological systems.",
+    bioZh: "研究计算系统生物学与复杂生物系统的单细胞建模。",
+    photo: "/conference/peijie-zhou.jpg", url: "https://www.aais.pku.edu.cn/info/1653/3721.htm",
+  },
+  {
+    name: "Zhikang Wang", nameZh: "王智康", role: "Guest", roleZh: "参会嘉宾",
+    title: "Assistant Professor, Fudan University",
+    titleZh: "复旦大学助理教授",
+    bio: "Works on spatial omics and computational pathology.",
+    bioZh: "研究空间组学与计算病理学。",
+    photo: "/conference/zhikang-wang.jpg", url: "https://faculty.fudan.edu.cn/WangZhikang/zh_CN/index.htm#skxx",
+  },
+  {
+    name: "Xiao Wang", nameZh: "王晓", role: "Guest", roleZh: "参会嘉宾",
+    title: "Lecturer, University of International Business and Economics",
+    titleZh: "对外经济贸易大学讲师",
+    bio: "Works on information retrieval, retrieval-augmented generation, and natural language processing.",
+    bioZh: "研究智能信息检索、检索增强生成与自然语言处理。",
+    photo: "/conference/xiao-wang.jpg", url: "https://saids.uibe.edu.cn/szdw/zzjs/rgznx/bbcda9b87835473c834d39bd0bb39849.htm",
+  },
+  {
+    name: "Siwei Liu", nameZh: "刘思危", role: "Guest", roleZh: "参会嘉宾",
+    title: "Assistant Professor, University of Aberdeen",
+    titleZh: "阿伯丁大学助理教授",
+    bio: "Studies LLM multi-agent collaboration and biomedical graph learning.",
+    bioZh: "研究大语言模型多智能体协作与生物医学图学习。",
+    photo: "/team/siwei.webp", url: "https://tedsiweiliu.github.io/",
+  },
+  {
+    name: "Haibin Ling", nameZh: "凌海滨", role: "Guest", roleZh: "参会嘉宾",
+    title: "Chair Professor, Westlake University",
+    titleZh: "西湖大学讲席教授",
+    bio: "Studies computer vision, medical image analysis, and AI for Science.",
+    bioZh: "研究计算机视觉、医学影像分析与科学人工智能。",
+    photo: "/conference/haibin-ling.jpg", url: "https://www.westlake.edu.cn/faculty/haibin-ling.html#1",
+  },
 ] as const;
+
+const familyName = (name: string) => name.split(" ").at(-1) ?? name;
+const leadershipRank = (title: string) =>
+  title.includes("Head of School") || title.includes("Dean") ? 0 : 1;
+const academicRank = (title: string) => {
+  if (title.startsWith("Chair Professor")) return 0;
+  if (title.startsWith("Professor")) return 1;
+  if (title.startsWith("Reader") || title.startsWith("Associate Professor")) return 2;
+  if (title.startsWith("Assistant Professor")) return 3;
+  if (title.startsWith("Lecturer")) return 4;
+  if (title.startsWith("PhD Researcher")) return 5;
+  return 6;
+};
+const orderedPeople = [...people].sort((a, b) =>
+  leadershipRank(a.title) - leadershipRank(b.title) ||
+  academicRank(a.title) - academicRank(b.title) ||
+  familyName(a.name).localeCompare(familyName(b.name), "en") ||
+  a.name.localeCompare(b.name, "en")
+);
 
 const themes = [
   { title: "Scientific knowledge and retrieval", titleZh: "科学知识与检索" },
@@ -76,14 +151,14 @@ export default function Conference() {
         <img src="/brand/anative-mark.png" width="44" height="44" alt="" />
         <span>ANative <b>Lab</b></span>
       </a>
-      <nav className="conference-nav-links" aria-label={t("Conference navigation", "会议导航")}>
+      <nav className="conference-nav-links" aria-label={t("Workshop navigation", "研讨会导航")}>
         <a href="#overview">{t("Overview", "简介")}</a>
-        <a href="#people">{t("Organizer & Guests", "组织者与嘉宾")}</a>
+        <a href="#people">{t("Organizer & Participants", "组织方与参会人员")}</a>
         <a href="#programme">{t("Programme", "议程")}</a>
         <a href="#attend">{t("Attend", "参会")}</a>
       </nav>
       <div className="conference-nav-actions">
-        <a href="/workshops.html" aria-label={t("All workshops", "返回 Workshops")} title={t("All workshops", "返回 Workshops")}>{t("All workshops", "返回 Workshops")}</a>
+        <a href="/index.html" aria-label={t("Return to ANative Lab", "返回 ANative Lab 首页")} title={t("Return to ANative Lab", "返回 ANative Lab 首页")}>{t("Return to ANative Lab", "返回 ANative Lab 首页")}</a>
         <button type="button" onClick={() => setZh(value => !value)} aria-label={t("Switch to Chinese", "切换至英文")}>{zh ? "EN" : "中文"}</button>
       </div>
     </header>
@@ -92,13 +167,13 @@ export default function Conference() {
       <section className="conference-hero" aria-labelledby="conference-title">
         <div className="conference-hero-content">
           <p className="conference-edition">ANative Lab · 2026</p>
-          <h1 id="conference-title">{zh ? <>ANative <span>国际学术研讨会</span></> : "ANative International Workshop"}</h1>
+          <h1 id="conference-title">{zh ? <>ANative <span>学术研讨会</span></> : "ANative Workshop"}</h1>
           <p className="conference-hero-theme">{t("Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery", "智能体原生科研：多智能体协同与科学发现")}</p>
-          <a className="conference-hero-link" href="#people">{t("Meet the organizer and guests", "了解组织者与嘉宾")} <span aria-hidden="true">↘</span></a>
+          <a className="conference-hero-link" href="#people">{t("Meet the participants", "了解参会人员")} <span aria-hidden="true">↘</span></a>
         </div>
       </section>
 
-      <section className="conference-facts" aria-label={t("Conference information", "会议信息")}>
+      <section className="conference-facts" aria-label={t("Workshop information", "研讨会信息")}>
         <div><dt>{t("Date", "日期")}</dt><dd>{t("21 December 2026", "2026年12月21日")}</dd></div>
         <div><dt>{t("Venue", "地点")}</dt><dd>{t("Huazhong University of Science and Technology", "华中科技大学")}</dd></div>
         <div><dt>{t("Format", "形式")}</dt><dd>{t("Academic workshop", "学术研讨会")}</dd></div>
@@ -117,11 +192,19 @@ export default function Conference() {
 
       <section className="conference-people" id="people" aria-labelledby="conference-people-title">
         <div className="conference-people-intro">
-          <h2 id="conference-people-title">{t("Organizer & Guests", "组织者与嘉宾")}</h2>
-          <p>{t("Guest participation and the programme are being finalized.", "嘉宾参与及具体议程仍在确认中。")}</p>
+          <h2 id="conference-people-title">{t("Organizer & Participants", "组织方与参会人员")}</h2>
+          <p>{t("The programme and presentation details will be announced when confirmed.", "具体议程与报告信息确认后公布。")}</p>
+        </div>
+        <div className="conference-organizer">
+          <img src="/brand/anative-mark.png" width="58" height="58" alt="" />
+          <div className="conference-organizer-name">
+            <span>{t("Organized by", "主办方")}</span>
+            <strong>ANative Lab</strong>
+          </div>
+          <a href="/index.html">{t("Visit ANative Lab", "访问 ANative Lab")}<span aria-hidden="true">↗</span></a>
         </div>
         <div className="conference-people-list">
-          {people.map(person => <article className="conference-person" key={person.name}>
+          {orderedPeople.map(person => <article className="conference-person" key={person.name}>
             <img className="conference-person-photo" src={person.photo} width="112" height="112" alt={t(`Portrait of ${person.name}`, `${person.nameZh}的照片`)} loading="lazy" />
             <div className="conference-person-info">
               <div className="conference-person-heading">
