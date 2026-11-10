@@ -4,11 +4,11 @@ import test from "node:test";
 
 const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
 const styles = await readFile(new URL("../app/redesign.css", import.meta.url), "utf8");
-const routes = ["home", "research", "systems", "vision", "people", "workshops", "talks", "join"];
+const routes = ["home", "research", "systems", "vision", "people", "workshops", "talks", "blog", "join"];
 
 test("primary navigation uses independent HTML documents", async () => {
   for (const route of routes) {
-    const subpage = route === "workshops" || route === "talks";
+    const subpage = route === "workshops" || route === "talks" || route === "blog";
     assert.ok(page.includes(subpage ? `href={routeHref("${route}")}` : `["${route}"`), `${route} route is present in the navigation`);
     const file = route === "home" ? "index" : route;
     const html = await readFile(new URL(`../github-pages/${file}.html`, import.meta.url), "utf8");
@@ -27,13 +27,68 @@ test("Activities is a disclosure with independent pages and a legacy redirect", 
   assert.doesNotMatch(page, /ActivitiesPanel|Back to Activities|routeHref\("activities"\)/);
   assert.match(page, /aria-expanded=\{open\}/);
   assert.match(page, /aria-controls="activities-submenu"/);
-  assert.match(page, /onPointerEnter=\{event=>\{if\(event\.pointerType==="mouse"/);
-  const menu = page.slice(page.indexOf("function ActivitiesMenu"), page.indexOf("function ActivityDetailPanel"));
+  assert.match(page, /group\.addEventListener\("pointerenter",enter\)/);
+  const menu = page.slice(page.indexOf("function ActivitiesMenu"), page.indexOf("function LabFilmPanel"));
   assert.ok(menu.indexOf(">Workshops</a>") < menu.indexOf(">Talks</a>"));
+  assert.ok(menu.indexOf(">Talks</a>") < menu.indexOf(">Blog</a>"));
+  assert.doesNotMatch(menu, />Teaching<\/a>/);
+  assert.doesNotMatch(page.slice(page.indexOf('<footer className="footer-v2">')), />Teaching<\/a>/);
   const html = await readFile(new URL("../dist-pages/activities.html", import.meta.url), "utf8");
   assert.match(html, /http-equiv="refresh" content="0;url=workshops.html"/);
-  assert.match(page, /page==="workshops"&&<ActivityDetailPanel kind="workshops"/);
+  assert.match(page, /page==="workshops"&&<WorkshopsPreview/);
   assert.match(page, /page==="talks"&&<TalksArchive/);
+  assert.match(page, /page==="teaching"&&<TeachingArchive/);
+  assert.match(page, /page==="blog"&&<BlogArchive/);
+});
+
+test("workshop preview marks unconfirmed logistics and speakers as pending", async () => {
+  const preview = await readFile(new URL("../app/workshops.tsx", import.meta.url), "utf8");
+  assert.match(preview, /ANative 2026 Workshop/);
+  assert.match(preview, /Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery/);
+  assert.match(preview, /To be confirmed/);
+  assert.match(preview, /Not open yet/);
+  assert.doesNotMatch(preview, /Ke Yuan|Zhaochun Ren|Iadh Ounis|Jeff Z\. Pan/);
+});
+
+test("workshop links to a standalone conference preview with local portraits", async () => {
+  const [preview, conference, html] = await Promise.all([
+    readFile(new URL("../app/workshops.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/conference.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../dist-pages/conference.html", import.meta.url), "utf8"),
+  ]);
+  assert.match(preview, /href="\/conference\.html"/);
+  assert.match(html, /assets\/conference-[^" ]+\.js/);
+  for (const name of ["Zaiqiao Meng", "Iadh Ounis", "Ke Yuan", "Zhaochun Ren", "Xi Zhang", "Zhaohan Meng", "Qiang Zhang", "Fajie Yuan", "Peijie Zhou", "Zhikang Wang", "Xiao Wang", "Siwei Liu", "Haibin Ling"]) {
+    assert.ok(conference.includes(name), `${name} appears on the conference page`);
+  }
+  assert.match(conference, /The programme and presentation details will be announced when confirmed/);
+  assert.match(conference, /name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Guest", roleZh: "参会嘉宾"/);
+  assert.match(conference, /Head of School of Computing Science, University of Glasgow/);
+  assert.match(conference, /className="conference-organizer"/);
+  assert.match(conference, /<strong>ANative Lab<\/strong>/);
+  assert.match(conference, /<a href="\/index\.html">\{t\("Visit ANative Lab", "访问 ANative Lab"\)\}/);
+  assert.match(conference, /Not open yet/);
+  for (const file of ["iadh-ounis.jpg", "ke-yuan.jpg", "zhaochun-ren.jpeg", "zhaohan-meng.jpg", "qiang-zhang.jpg", "fajie-yuan.jpg", "peijie-zhou.jpg", "zhikang-wang.jpg", "xiao-wang.jpg", "haibin-ling.jpg"]) {
+    await access(new URL(`../dist-pages/conference/${file}`, import.meta.url));
+  }
+});
+
+test("EvoScientist seminar opens as its own page with local media and slides", async () => {
+  const [talks, detail, html] = await Promise.all([
+    readFile(new URL("../app/talks.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/evoscientist-seminar.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../dist-pages/evoscientist-seminar.html", import.meta.url), "utf8"),
+  ]);
+  assert.match(talks, /href="\/evoscientist-seminar\.html"/);
+  assert.match(page, /page==="evoscientist-seminar"&&<EvoScientistSeminar/);
+  assert.match(detail, /href="\/talks\.html"/);
+  assert.match(html, /assets\/main-/);
+  assert.match(talks, /seminar-room-edited\.jpg/);
+  assert.match(detail, /Edited composite of the seminar/);
+  assert.doesNotMatch(detail, /Original unedited EvoScientist seminar photo/);
+  for (const file of ["seminar-room-edited.jpg", "seminar-room.jpg", "seminar-opening.jpg", "speaker-poster.jpg", "EvoScientist-Xi-Zhang-slides.pptx"]) {
+    await access(new URL(`../dist-pages/talks/2026-08-18/${file}`, import.meta.url));
+  }
 });
 
 test("navigation highlighting and page entry motion are available", () => {

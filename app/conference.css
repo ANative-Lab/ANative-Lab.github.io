@@ -1,0 +1,86 @@
+.conference-site{--conf-ink:#18342c;--conf-deep:#0a2b21;--conf-paper:#f8faf7;--conf-line:#d4e1d7;min-height:100vh;background:var(--conf-paper);color:var(--conf-ink);font-family:"DM Sans",Arial,sans-serif}
+.conference-site *{box-sizing:border-box}
+.conference-site a{color:inherit}
+.conference-site button{font:inherit}
+body{margin:0;background:#f8faf7}
+.conference-nav{display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:72px;padding:12px max(32px,calc((100vw - 1200px)/2));background:#0a231c;color:#f7fbf6}
+.conference-brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font:600 20px/1 "Space Grotesk",Arial,sans-serif;white-space:nowrap}
+.conference-brand img{display:block;width:42px;height:42px;object-fit:contain}
+.conference-brand b{font-weight:500;color:#96d9ad}
+.conference-nav-links{display:flex;align-items:center;gap:24px;margin-left:auto}
+.conference-nav-links a{color:#c5ddca;font-size:12px;text-decoration:none}
+.conference-nav-links a:hover{color:#fff}
+.conference-nav-actions{display:flex;align-items:center;gap:24px}
+.conference-nav-actions a{padding:7px 0;border-bottom:1px solid transparent;font-size:13px;text-decoration:none}
+.conference-nav-actions a:hover{border-color:#91d6ab}
+.conference-nav-actions button{min-width:49px;height:34px;padding:0 10px;border:1px solid #7cb99a;border-radius:4px;background:transparent;color:#f8faf7;cursor:pointer;font-size:12px}
+.conference-nav-actions button:hover{background:#27513c}
+.conference-site :is(a,button):focus-visible{outline:2px solid #e6a07e;outline-offset:4px}
+.conference-hero{position:relative;display:flex;align-items:flex-start;min-height:300px;overflow:hidden;background:var(--conf-deep);color:#fff}
+.conference-hero::after{position:absolute;right:0;bottom:0;width:35%;height:4px;background:#9bd4aa;content:""}
+.conference-hero-content{width:min(100% - 64px,1200px);margin:0 auto;padding:43px 0 38px}
+.conference-edition{margin:0 0 14px;color:#a5dfb7;font-size:13px;font-weight:700}
+.conference-hero h1{max-width:850px;margin:0;font:600 48px/1.1 "Space Grotesk",Arial,sans-serif;overflow-wrap:break-word}
+.conference-hero h1 span{white-space:nowrap}
+.conference-hero-theme{max-width:810px;margin:14px 0 0;color:#c0e2c9;font:500 23px/1.4 "Space Grotesk",Arial,sans-serif}
+.conference-hero-link{display:inline-flex;gap:8px;align-items:center;margin-top:21px;color:#f2ae8a;font-size:13px;font-weight:700;text-decoration:none}
+.conference-hero-link:hover{text-decoration:underline;text-underline-offset:4px}
+.conference-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;padding:0 max(32px,calc((100vw - 1200px)/2));background:#eaf2eb;border-bottom:1px solid var(--conf-line)}
+.conference-facts>div{min-width:0;padding:15px 24px 16px 0;border-right:1px solid #cbdccf}
+.conference-facts>div+div{padding-left:24px}
+.conference-facts>div:last-child{border-right:0}
+.conference-facts dt{color:#5d7867;font-size:11px;font-weight:700}
+.conference-facts dd{margin:6px 0 0;color:#18342c;font-size:14px;font-weight:700}
+.conference-overview{display:grid;grid-template-columns:210px minmax(0,1fr);gap:40px;width:min(100% - 64px,1200px);margin:0 auto;padding:44px 0 50px}
+.conference-section-head h2,.conference-people-intro h2,.conference-attend h2{margin:0;font:600 29px/1.25 "Space Grotesk",Arial,sans-serif}
+.conference-overview-body>p{max-width:780px;margin:0 0 18px;color:#435e51;font-size:15px;line-height:1.65}
+.conference-theme-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;max-width:830px;margin:0;padding:0;list-style:none;border-top:1px solid var(--conf-line)}
+.conference-theme-list li{padding:10px 0;border-bottom:1px solid var(--conf-line);font-size:13px;font-weight:700;line-height:1.45}
+.conference-people{padding:46px max(32px,calc((100vw - 1200px)/2)) 54px;background:#edf3ee}
+.conference-people-intro{display:flex;align-items:baseline;justify-content:space-between;gap:30px;margin-bottom:18px}
+.conference-people-intro>p{max-width:440px;margin:0;color:#587365;font-size:13px;line-height:1.55}
+.conference-organizer{display:flex;align-items:center;gap:18px;margin-bottom:10px;padding:17px 22px;border-left:4px solid #2e704e;background:#dcebe0}
+.conference-organizer>img{display:block;width:58px;height:58px;flex:none;object-fit:contain}
+.conference-organizer-name{display:flex;flex-direction:column;gap:3px;min-width:0}
+.conference-organizer-name span{color:#536f5d;font-size:11px;font-weight:700}
+.conference-organizer-name strong{font:600 25px/1.2 "Space Grotesk",Arial,sans-serif}
+.conference-organizer a{margin-left:auto;color:#28573e;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.conference-organizer a:hover{text-decoration:underline;text-underline-offset:4px}
+.conference-organizer a span{margin-left:8px;color:#a55e3e;font-size:16px}
+.conference-people-list{border-top:1px solid #c6d6ca}
+.conference-person{display:grid;grid-template-columns:96px minmax(0,1fr);gap:22px;min-width:0;padding:18px 0;border-bottom:1px solid #c6d6ca}
+.conference-person-photo{display:block;width:96px;height:96px;border-radius:4px;object-fit:cover;object-position:center 25%;background:#dce6de}
+.conference-person-info{min-width:0}
+.conference-person-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 15px}
+.conference-person h3{margin:0;font:600 21px/1.25 "Space Grotesk",Arial,sans-serif}
+.conference-person h3 a{text-decoration:none}
+.conference-person h3 a:hover{color:#a95c3e}
+.conference-person h3 span{margin-left:7px;color:#b96d4b;font-size:14px}
+.conference-person-role{color:#a55e3e;font-size:12px;font-weight:700}
+.conference-person-secondary{margin:2px 0 0;color:#638071;font-size:12px}
+.conference-person-title{margin:8px 0 0;color:#2b503e;font-size:13px;font-weight:700;line-height:1.5}
+.conference-person-bio{max-width:870px;margin:7px 0 0;color:#4e695a;font-size:14px;line-height:1.55}
+.conference-programme{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:50px;padding:46px max(32px,calc((100vw - 1200px)/2)) 50px;background:#f8faf7;border-top:1px solid var(--conf-line)}
+.conference-kicker{margin:0 0 13px;color:#b45c3a;font-size:13px;font-weight:700}
+.conference-programme h2{max-width:560px;margin:0;font:600 30px/1.25 "Space Grotesk",Arial,sans-serif}
+.conference-programme-note{align-self:end;padding:20px 0 3px;border-top:1px solid var(--conf-line)}
+.conference-programme-note span{color:#a55e3e;font-size:12px;font-weight:700}
+.conference-programme-note p{max-width:440px;margin:9px 0 0;color:#567063;font-size:14px;line-height:1.65}
+.conference-attend{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:55px;padding:52px max(32px,calc((100vw - 1200px)/2)) 58px;background:#f8faf7}
+.conference-attend-title>p:first-child{margin:0 0 13px;color:#b45c3a;font-size:13px;font-weight:700}
+.conference-attend-title>p:last-child{max-width:430px;margin:16px 0 0;color:#567063;font-size:14px;line-height:1.65}
+.conference-attend-facts{margin:0;border-top:1px solid var(--conf-line)}
+.conference-attend-facts>div{display:grid;grid-template-columns:125px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--conf-line)}
+.conference-attend-facts dt{color:#5d7867;font-size:13px}
+.conference-attend-facts dd{margin:0;font-size:14px;font-weight:700}
+.conference-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px max(32px,calc((100vw - 1200px)/2));background:#09241c;color:#f3f8f2}
+.conference-footer span{font:600 17px "Space Grotesk",Arial,sans-serif;white-space:nowrap}
+.conference-footer p{max-width:450px;margin:0;color:#a9c4b0;font-size:12px;line-height:1.5}
+.conference-footer a{font-size:12px;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+@media(max-width:900px){.conference-nav-links{gap:14px}.conference-nav-links a{font-size:11px}.conference-nav-actions{gap:14px}.conference-programme{gap:42px}}
+@media(max-width:700px){.conference-nav{min-height:64px;padding:10px 20px}.conference-brand{font-size:17px}.conference-brand img{width:36px;height:36px}.conference-nav-links{display:none}.conference-nav-actions{gap:12px}.conference-nav-actions a{font-size:11px}.conference-hero{min-height:290px}.conference-hero-content{width:calc(100% - 40px);padding:42px 0 34px}.conference-edition{font-size:12px}.conference-hero h1{font-size:36px}.conference-hero-theme{font-size:19px}.conference-facts{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 20px}.conference-facts>div{padding:13px 15px 14px 0}.conference-facts>div+div{padding-left:15px}.conference-facts>div:nth-child(2){border-right:0}.conference-facts>div:nth-child(-n+2){border-bottom:1px solid #cbdccf}.conference-facts dd{font-size:13px}.conference-overview{display:block;width:calc(100% - 40px);padding:38px 0 42px}.conference-section-head h2,.conference-people-intro h2,.conference-attend h2{font-size:25px}.conference-overview-body>p{margin-top:12px;font-size:14px}.conference-theme-list{grid-template-columns:1fr}.conference-theme-list li{font-size:12px}.conference-people{padding:42px 20px 46px}.conference-people-intro{display:block;margin-bottom:16px}.conference-people-intro>p{margin-top:9px}.conference-person{grid-template-columns:78px minmax(0,1fr);gap:14px;padding:17px 0}.conference-person-photo{width:78px;height:78px}.conference-person h3{font-size:18px}.conference-person-title{font-size:12px}.conference-person-bio{font-size:12px}.conference-programme{display:block;padding:42px 20px 44px}.conference-programme h2{font-size:25px}.conference-programme-note{margin-top:22px}.conference-attend{display:block;padding:44px 20px 50px}.conference-attend-facts{margin-top:22px}.conference-footer{flex-wrap:wrap;padding:26px 20px}.conference-footer p{order:3;width:100%}}
+@media(max-width:390px){.conference-nav-actions a{max-width:85px;text-align:right;line-height:1.25}.conference-hero h1{font-size:32px}.conference-hero-theme{font-size:17px}.conference-hero-meta{display:block}.conference-hero-meta span{display:block}.conference-hero-meta span+span{margin-top:7px}.conference-attend-facts>div{grid-template-columns:95px minmax(0,1fr)}}
+@media(max-width:360px){.conference-nav-actions a{display:flex;align-items:center;justify-content:center;width:28px;height:34px;max-width:none;padding:0;overflow:hidden;font-size:0}.conference-nav-actions a::before{content:"←";font-size:20px;line-height:1}}
+@media(max-width:700px){.conference-organizer{gap:13px;padding:15px 16px}.conference-organizer>img{width:48px;height:48px}.conference-organizer-name strong{font-size:21px}.conference-organizer a{font-size:12px}}
+@media(max-width:480px){.conference-organizer{flex-wrap:wrap}.conference-organizer a{width:100%;margin-left:61px}}
+@media(prefers-reduced-motion:reduce){.conference-site *, .conference-site *::before, .conference-site *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
