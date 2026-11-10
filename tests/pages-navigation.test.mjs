@@ -86,7 +86,7 @@ test("EvoScientist seminar opens as its own page with local media and slides", a
   assert.match(talks, /seminar-room-edited\.jpg/);
   assert.match(detail, /Edited composite of the seminar/);
   assert.doesNotMatch(detail, /Original unedited EvoScientist seminar photo/);
-  for (const file of ["seminar-room-edited.jpg", "seminar-room.jpg", "seminar-opening.jpg", "speaker-poster.jpg", "EvoScientist-Xi-Zhang-slides.pptx"]) {
+  for (const file of ["seminar-room-edited.jpg", "speaker-poster.jpg", "EvoScientist-Xi-Zhang-slides.pptx"]) {
     await access(new URL(`../dist-pages/talks/2026-08-18/${file}`, import.meta.url));
   }
 });

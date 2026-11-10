@@ -1,10 +1,10 @@
 # ANative Lab website
 
-Source of the ANative Lab website, served at `https://anative-lab.github.io/`.
+Source of the ANative Lab website, served at `https://anative.ai/`.
 
 ## Develop and build
 
-Requires Node.js >=22.13.0.
+Requires Node.js >=22.18.0 (the tests import TypeScript files directly).
 
 ```sh
 npm ci
@@ -31,11 +31,14 @@ been removed.
 
 ## Deploy
 
-`.github/workflows/deploy-pages.yml` builds and deploys pushes to `main`.
+`.github/workflows/deploy-pages.yml` builds, runs `npm run test:pages`, and
+deploys pushes to `main`; a failing test stops the deploy.
 The repository's Settings → Pages → Source must use **GitHub Actions**.
 With "Deploy from a branch", GitHub also runs a Jekyll build of the repository
 root on every push, and whichever deployment finishes last wins: the site may
 then show this README instead of the built pages.
 
-The website uses the default address `https://anative-lab.github.io/` with no
-custom domain.
+The website is served at `https://anative.ai/`, the custom domain set in
+Settings → Pages; `https://anative-lab.github.io/` redirects there. With GitHub
+Actions deploys the domain lives only in that setting, so the repository has no
+`CNAME` file.
