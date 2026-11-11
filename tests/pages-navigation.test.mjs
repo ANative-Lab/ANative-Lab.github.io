@@ -51,19 +51,24 @@ test("workshop preview marks unconfirmed logistics and speakers as pending", asy
 });
 
 test("workshop links to a standalone conference preview with local portraits", async () => {
-  const [preview, conference, html] = await Promise.all([
+  const [preview, conference, html, legacy] = await Promise.all([
     readFile(new URL("../app/workshops.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/conference.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../dist-pages/anative-2026-workshop.html", import.meta.url), "utf8"),
     readFile(new URL("../dist-pages/conference.html", import.meta.url), "utf8"),
   ]);
-  assert.match(preview, /href="\/conference\.html"/);
-  assert.match(html, /assets\/conference-[^" ]+\.js/);
+  assert.match(preview, /href="\/anative-2026-workshop\.html"/);
+  assert.match(html, /assets\/anativeWorkshop-[^" ]+\.js/);
+  assert.match(html, /ANative 2026 Workshop/);
+  assert.match(legacy, /url=anative-2026-workshop\.html/);
   for (const name of ["Zaiqiao Meng", "Iadh Ounis", "Ke Yuan", "Zhaochun Ren", "Xi Zhang", "Zhaohan Meng", "Qiang Zhang", "Fajie Yuan", "Peijie Zhou", "Zhikang Wang", "Xiao Wang", "Siwei Liu", "Haibin Ling"]) {
     assert.ok(conference.includes(name), `${name} appears on the conference page`);
   }
   assert.match(conference, /The programme and presentation details will be announced when confirmed/);
-  assert.match(conference, /name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Guest", roleZh: "参会嘉宾"/);
+  assert.match(conference, /name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Invited Speaker", roleZh: "特邀报告嘉宾"/);
   assert.match(conference, /Head of School of Computing Science, University of Glasgow/);
+  assert.match(conference, /Chair Professor · IEEE Fellow, Westlake University/);
+  assert.match(conference, /Huazhong University of Science and Technology, Wuhan/);
   assert.match(conference, /className="conference-organizer"/);
   assert.match(conference, /<strong>ANative Lab<\/strong>/);
   assert.match(conference, /<a href="\/index\.html">\{t\("Visit ANative Lab", "访问 ANative Lab"\)\}/);

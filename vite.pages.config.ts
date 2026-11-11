@@ -22,6 +22,7 @@ export default defineConfig({
         activities: path.join(projectRoot, "github-pages/activities.html"),
         workshops: path.join(projectRoot, "github-pages/workshops.html"),
         conference: path.join(projectRoot, "github-pages/conference.html"),
+        anativeWorkshop: path.join(projectRoot, "github-pages/anative-2026-workshop.html"),
         talks: path.join(projectRoot, "github-pages/talks.html"),
         evoscientistSeminar: path.join(projectRoot, "github-pages/evoscientist-seminar.html"),
         teaching: path.join(projectRoot, "github-pages/teaching.html"),
