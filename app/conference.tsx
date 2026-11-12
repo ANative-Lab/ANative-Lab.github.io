@@ -21,7 +21,7 @@ const people = [
     photo: "/conference/iadh-ounis.jpg", url: "https://www.gla.ac.uk/schools/computing/staff/iadhounis/",
   },
   {
-    name: "Ke Yuan", nameZh: "Ke Yuan", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Ke Yuan", nameZh: "袁可", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
     title: "Reader, University of Glasgow",
     titleZh: "格拉斯哥大学 Reader",
     bio: "Applies machine learning to computational pathology, cancer evolution, and biomedical research.",
@@ -61,7 +61,7 @@ const people = [
     photo: "/conference/qiang-zhang.jpg", url: "https://person.zju.edu.cn/zhangqiang",
   },
   {
-    name: "Fajie Yuan", nameZh: "Fajie Yuan", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Fajie Yuan", nameZh: "原发杰", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
     title: "Assistant Professor, Westlake University",
     titleZh: "西湖大学助理教授",
     bio: "Develops protein language models and AI methods for life science.",
@@ -243,7 +243,7 @@ export default function Conference() {
     <footer className="conference-footer">
       <span>ANative Lab</span>
       <p>{t("Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery", "智能体原生科研：多智能体协同与科学发现")}</p>
-      <a href="/workshops.html">{t("Back to Workshops", "返回 Workshops")}</a>
+      <a href="/index.html">{t("Return to ANative Lab", "返回 ANative Lab 首页")}</a>
     </footer>
   </div>;
 }
