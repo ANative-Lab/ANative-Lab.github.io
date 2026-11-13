@@ -52,7 +52,7 @@ function HomeEvent({zh}:{zh:boolean}){
   {en:"Zaiqiao Meng",cn:"蒙在桥",orgEn:"Huazhong University of Science and Technology",orgCn:"华中科技大学",photo:"zaiqiao-meng"}
  ];
  return <section className="home-event" aria-labelledby="home-event-title"><div className="home-event-inner">
-  <div className="home-event-main"><div className="home-event-label">{zh?"活动预告":"UPCOMING EVENT"}</div><h2 id="home-event-title">{zh?"2026国际产学研用合作会议 · 智能计算分会场":"Intelligent Computing Session · 2026 International Conference"}</h2><p>{zh?"11月14日 15:00–17:35 · 华中科技大学计算机新大楼1028会议室":"14 November 2026, 15:00–17:35 · Room 1028, New Computer Science Building, HUST"}</p></div>
+  <div className="home-event-main"><div className="home-event-label">{zh?"活动预告":"UPCOMING EVENT"}</div><h2 id="home-event-title">{zh?"2026国际产学研用合作会议 · 智能计算分会场":"Intelligent Computing Session · 2026 International Conference"}</h2><p>{zh?"11月14日 15:00–17:35 · 武汉市华中科技大学计算机新大楼1028会议室":"14 November 2026, 15:00–17:35 · Room 1028, New Computer Science Building, HUST, Wuhan"}</p></div>
   <div className="home-event-actions"><a href="/workshops.html#intelligent-computing">{zh?"查看活动详情":"View event details"} ↗</a><a className="home-event-poster" href="/events/intelligent-computing-2026.jpg" target="_blank" rel="noreferrer">{zh?"查看完整海报":"View full poster"} ↗</a></div>
   <div className="home-event-speakers"><div className="home-event-speakers-label">{zh?"讲座嘉宾":"GUEST SPEAKERS"}</div><ul>{speakers.map(s=><li key={s.en}><img src={`/events/${s.photo}.jpg`} alt={zh?`${s.cn}的照片`:`Portrait of ${s.en}`} width="72" height="72"/><div><strong>{zh?s.cn:s.en}</strong><span>{zh?"教授":"Professor"}</span><span>{zh?s.orgCn:s.orgEn}</span></div></li>)}</ul></div>
  </div></section>

@@ -57,7 +57,7 @@ export default function WorkshopsPreview({zh}: {zh: boolean}) {
         </div>
         <dl className="workshop-facts">
           <div><dt>{zh ? "时间" : "DATE"}</dt><dd>{zh ? "2026年11月14日 15:00–17:35" : "14 November 2026, 15:00–17:35"}</dd></div>
-          <div><dt>{zh ? "地点" : "VENUE"}</dt><dd>{zh ? "华中科技大学计算机新大楼1028会议室" : "Room 1028, New Building of the School of Computer Science and Technology, HUST"}</dd></div>
+          <div><dt>{zh ? "地点" : "VENUE"}</dt><dd>{zh ? "武汉市华中科技大学计算机新大楼1028会议室" : "Room 1028, New Building of the School of Computer Science and Technology, HUST, Wuhan"}</dd></div>
           <div><dt>{zh ? "主持人" : "HOST"}</dt><dd>{zh ? "李钦宾 教授" : "Prof. Qinbin Li"}</dd></div>
           <div><dt>{zh ? "主办" : "HOSTED BY"}</dt><dd>{zh ? "华中科技大学" : "Huazhong University of Science and Technology"}</dd></div>
           <div><dt>{zh ? "承办" : "ORGANIZED BY"}</dt><dd>{zh ? "华中科技大学计算机科学与技术学院" : "School of Computer Science and Technology, HUST"}</dd></div>
