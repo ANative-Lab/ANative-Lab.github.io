@@ -27,7 +27,7 @@ export default function WorkshopsPreview({zh}: {zh: boolean}) {
       <header className="workshops-intro">
         <p className="workshops-breadcrumb">{zh ? "活动" : "Activities"}<span aria-hidden="true">/</span>Workshops</p>
         <h1 id="workshops-title">Workshops</h1>
-        <p>{zh ? "围绕智能体原生科研开展学术交流。" : "Academic conversations on agent-native research."}</p>
+        <p>{zh ? "学术研讨会与研究交流活动。" : "Workshops and academic research events."}</p>
       </header>
 
       <article className="workshop-event" aria-labelledby="workshop-event-title">
@@ -43,6 +43,24 @@ export default function WorkshopsPreview({zh}: {zh: boolean}) {
           <div><dt>{zh ? "会场" : "VENUE"}</dt><dd>{zh ? "华中科技大学，武汉" : "Huazhong University of Science and Technology, Wuhan"}</dd></div>
           <div><dt>{zh ? "嘉宾" : "SPEAKERS"}</dt><dd>{zh ? "待定" : "To be confirmed"}</dd></div>
           <div><dt>{zh ? "报名" : "REGISTRATION"}</dt><dd>{zh ? "待开放" : "Not open yet"}</dd></div>
+        </dl>
+      </article>
+
+      <article className="workshop-event workshop-forum" id="intelligent-computing" aria-labelledby="intelligent-computing-title">
+        <div className="workshop-event-main">
+          <div className="workshop-event-label"><span>{zh ? "学术活动" : "ACADEMIC EVENT"}</span><span>14 NOV 2026</span></div>
+          <h2 id="intelligent-computing-title">{zh ? "智能计算分会场" : "Intelligent Computing Session"}</h2>
+          <p className="workshop-theme">{zh ? "2026国际产学研用合作会议" : "2026 International Conference on the Cooperation and Integration of Industry, Education, Research and Application"}</p>
+          <p className="workshop-description">{zh ? "活动面向全校师生，欢迎感兴趣的师生参会。" : "Open to all faculty and students across the university."}</p>
+          <p className="workshop-forum-speakers"><strong>{zh ? "报告嘉宾" : "Speakers"}</strong><br />Craig Anderson · Laks V.S. Lakshmanan · {zh ? "杨欣 · 蒙在桥" : "Xin Yang · Zaiqiao Meng"}</p>
+          <a className="workshop-conference-link" href={`${import.meta.env.BASE_URL}events/intelligent-computing-2026.jpg`} target="_blank" rel="noopener noreferrer">{zh ? "查看活动海报" : "View event poster"}<span aria-hidden="true">↗</span></a>
+        </div>
+        <dl className="workshop-facts">
+          <div><dt>{zh ? "时间" : "DATE"}</dt><dd>{zh ? "2026年11月14日 15:00–17:35" : "14 November 2026, 15:00–17:35"}</dd></div>
+          <div><dt>{zh ? "地点" : "VENUE"}</dt><dd>{zh ? "华中科技大学计算机新大楼1028会议室" : "Room 1028, New Building of the School of Computer Science and Technology, HUST"}</dd></div>
+          <div><dt>{zh ? "主持人" : "HOST"}</dt><dd>{zh ? "李钦宾 教授" : "Prof. Qinbin Li"}</dd></div>
+          <div><dt>{zh ? "主办" : "HOSTED BY"}</dt><dd>{zh ? "华中科技大学" : "Huazhong University of Science and Technology"}</dd></div>
+          <div><dt>{zh ? "承办" : "ORGANIZED BY"}</dt><dd>{zh ? "华中科技大学计算机科学与技术学院" : "School of Computer Science and Technology, HUST"}</dd></div>
         </dl>
       </article>
 
