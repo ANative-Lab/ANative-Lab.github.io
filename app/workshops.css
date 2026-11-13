@@ -12,6 +12,8 @@
 .workshop-event h2{max-width:720px;margin:18px 0 14px;font:500 42px/1.15 var(--font-ai-display),Arial,sans-serif;letter-spacing:0;overflow-wrap:break-word}
 .workshop-theme{max-width:650px;margin:0 0 21px;color:#a8e4bd;font-size:17px;line-height:1.5}
 .workshop-description{max-width:660px;margin:0;color:#aebfb4;font-size:14px;line-height:1.75}
+.workshop-forum-speakers{margin:20px 0 0;color:#d8e6dd;font-size:13px;line-height:1.8}
+.workshop-forum-speakers strong{color:#83d9a6;font-weight:500}
 .workshop-conference-link{display:inline-flex;align-items:center;gap:20px;margin-top:24px;padding:11px 15px;border:1px solid #74bb91;border-radius:4px;color:#e8f8ec;text-decoration:none;font-size:13px;font-weight:600;transition:background .2s,color .2s}
 .workshop-conference-link:hover,.workshop-conference-link:focus-visible{background:#a5e0b7;color:#0a241b}
 .workshop-facts{align-self:start;margin:0;border-top:1px solid #365545}
