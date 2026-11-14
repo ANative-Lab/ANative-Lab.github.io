@@ -22,8 +22,8 @@ const people = [
   },
   {
     name: "Ke Yuan", nameZh: "袁可", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
-    title: "Reader, University of Glasgow",
-    titleZh: "格拉斯哥大学 Reader",
+    title: "Professor, University of Glasgow",
+    titleZh: "格拉斯哥大学教授",
     bio: "Applies machine learning to computational pathology, cancer evolution, and biomedical research.",
     bioZh: "利用机器学习、病理图像和基因组数据研究癌症演化及生物医学问题。",
     photo: "/conference/ke-yuan.jpg", url: "https://www.gla.ac.uk/schools/cancersciences/staff/keyuan/",

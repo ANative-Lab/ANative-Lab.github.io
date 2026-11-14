@@ -45,16 +45,12 @@ function ActivitiesMenu({label,current,onNavigate}:{label:string;current:boolean
  </div>
 }
 function HomeEvent({zh}:{zh:boolean}){
- const speakers=[
-  {en:"Craig Anderson",cn:"Craig Anderson",orgEn:"Faculty of Medicine, UNSW Sydney",orgCn:"新南威尔士大学医学院",photo:"craig-anderson"},
-  {en:"Laks V.S. Lakshmanan",cn:"Laks V.S. Lakshmanan",orgEn:"University of British Columbia",orgCn:"英属哥伦比亚大学",photo:"laks-lakshmanan"},
-  {en:"Xin Yang",cn:"杨欣",orgEn:"Huazhong University of Science and Technology",orgCn:"华中科技大学",photo:"xin-yang"},
-  {en:"Zaiqiao Meng",cn:"蒙在桥",orgEn:"Huazhong University of Science and Technology",orgCn:"华中科技大学",photo:"zaiqiao-meng"}
- ];
  return <section className="home-event" aria-labelledby="home-event-title"><div className="home-event-inner">
-  <div className="home-event-main"><div className="home-event-label">{zh?"活动预告":"UPCOMING EVENT"}</div><h2 id="home-event-title">{zh?"2026国际产学研用合作会议 · 智能计算分会场":"Intelligent Computing Session · 2026 International Conference"}</h2><p>{zh?"11月14日 15:00–17:35 · 武汉市华中科技大学计算机新大楼1028会议室":"14 November 2026, 15:00–17:35 · Room 1028, New Computer Science Building, HUST, Wuhan"}</p></div>
-  <div className="home-event-actions"><a href="/workshops.html#intelligent-computing">{zh?"查看活动详情":"View event details"} ↗</a><a className="home-event-poster" href="/events/intelligent-computing-2026.jpg" target="_blank" rel="noreferrer">{zh?"查看完整海报":"View full poster"} ↗</a></div>
-  <div className="home-event-speakers"><div className="home-event-speakers-label">{zh?"讲座嘉宾":"GUEST SPEAKERS"}</div><ul>{speakers.map(s=><li key={s.en}><img src={`/events/${s.photo}.jpg`} alt={zh?`${s.cn}的照片`:`Portrait of ${s.en}`} width="72" height="72"/><div><strong>{zh?s.cn:s.en}</strong><span>{zh?"教授":"Professor"}</span><span>{zh?s.orgCn:s.orgEn}</span></div></li>)}</ul></div>
+  <div className="home-event-main"><div className="home-event-label">{zh?"活动预告":"UPCOMING WORKSHOP"}</div><h2 id="home-event-title">ANative 2026 Workshop</h2><h3>{zh?"智能体原生科研：多智能体协同与科学发现":"Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery"}</h3><p>{zh?"2026年12月21日 · 华中科技大学，武汉":"21 December 2026 · Huazhong University of Science and Technology, Wuhan"}</p><div className="home-event-meta"><span><b>{zh?"主办":"ORGANIZER"}</b>{zh?"ANative Lab":"ANative Lab"}</span><span><b>{zh?"会场":"VENUE"}</b>{zh?"华中科技大学":"Huazhong University of Science and Technology"}</span></div></div>
+  <div className="home-event-actions"><a href="/anative-2026-workshop.html">{zh?"查看研讨会详情":"Explore the workshop"} ↗</a></div>
+  <div className="home-event-featured"><div className="home-event-featured-label">{zh?"特邀报告嘉宾":"FEATURED INVITED SPEAKERS"}</div><div className="home-event-featured-list">
+   {[["/conference/iadh-ounis.jpg","Iadh Ounis",zh?"格拉斯哥大学信息检索教授":"Professor of Information Retrieval, Glasgow"],["/conference/haibin-ling.jpg","Haibin Ling",zh?"IEEE Fellow · 西湖大学讲席教授":"IEEE Fellow · Chair Professor, Westlake"],["/team/zaiqiao.webp","Zaiqiao Meng",zh?"华中科技大学教授":"Professor, HUST"]].map(([photo,name,title])=><div className="home-event-person" key={name}><img src={photo} alt={name} width="48" height="48"/><span><strong>{name}</strong><small>{title}</small></span></div>)}
+  </div></div>
  </div></section>
 }
 function LabFilmPanel({zh}:{zh:boolean}){return <section className="lab-film" id="lab-film" aria-labelledby="lab-film-title"><div className="lab-film-heading"><div className="lab-film-mark"><span>02</span><b>LAB FILM</b></div><div className="lab-film-copy"><h2 id="lab-film-title">{zh?"让智能持续发生。":"Intelligence in motion."}</h2><p>{zh?"一段关于 AI 原生科研、智能体系统与 ANative Lab 的短片。":"A short film about AI-native research, agent systems, and the people building ANative Lab."}</p></div></div><div className="lab-film-frame"><video className="lab-film-video" autoPlay muted loop playsInline preload="metadata" poster="/media/anative-lab-film-poster.jpg" controls aria-label={zh?"ANative Lab 介绍视频":"ANative Lab introduction film"}><source src="/media/anative-lab-film.mp4" type="video/mp4"/>Your browser does not support the video tag.</video><div className="lab-film-meta"><span>ANATIVE LAB / 2026</span><span>48 SEC · SOUND ON ↗</span></div></div></section>}
