@@ -65,7 +65,9 @@ test("workshop links to a standalone conference preview with local portraits", a
     assert.ok(conference.includes(name), `${name} appears on the conference page`);
   }
   assert.match(conference, /The programme and presentation details will be announced when confirmed/);
-  assert.match(conference, /name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Invited Speaker", roleZh: "特邀报告嘉宾"/);
+  assert.match(conference, /name: "Zaiqiao Meng", nameZh: "蒙在桥"/);
+  assert.match(conference, /<h3 className="conference-speaker-label">\{t\("Invited Speakers", "特邀报告嘉宾"\)\}<\/h3>/);
+  assert.doesNotMatch(conference, /className="conference-person-(?:role|secondary)"/);
   assert.match(conference, /Head of School of Computing Science, University of Glasgow/);
   assert.match(conference, /Chair Professor · IEEE Fellow, Westlake University/);
   assert.match(conference, /Huazhong University of Science and Technology, Wuhan/);
