@@ -5,7 +5,7 @@ import "./conference.css";
 
 const people = [
   {
-    name: "Zaiqiao Meng", nameZh: "蒙在桥", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Zaiqiao Meng", nameZh: "蒙在桥",
     title: "Professor, Huazhong University of Science and Technology",
     titleZh: "华中科技大学教授",
     bio: "Researches LLM agents, multi-agent collaboration, self-evolution, and systems for autonomous scientific discovery.",
@@ -13,7 +13,7 @@ const people = [
     photo: "/team/zaiqiao.webp", url: "https://mengzaiqiao.howone.app/",
   },
   {
-    name: "Iadh Ounis", nameZh: "Iadh Ounis", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Iadh Ounis", nameZh: "Iadh Ounis",
     title: "Professor of Information Retrieval · Head of School of Computing Science, University of Glasgow",
     titleZh: "格拉斯哥大学信息检索教授、计算机科学学院院长",
     bio: "Works on information retrieval, recommender systems, and large-scale search, including the Terrier research platform.",
@@ -21,7 +21,7 @@ const people = [
     photo: "/conference/iadh-ounis.jpg", url: "https://www.gla.ac.uk/schools/computing/staff/iadhounis/",
   },
   {
-    name: "Ke Yuan", nameZh: "袁可", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Ke Yuan", nameZh: "袁可",
     title: "Professor, University of Glasgow",
     titleZh: "格拉斯哥大学教授",
     bio: "Applies machine learning to computational pathology, cancer evolution, and biomedical research.",
@@ -29,7 +29,7 @@ const people = [
     photo: "/conference/ke-yuan.jpg", url: "https://www.gla.ac.uk/schools/cancersciences/staff/keyuan/",
   },
   {
-    name: "Zhaochun Ren", nameZh: "任昭春", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Zhaochun Ren", nameZh: "任昭春",
     title: "Associate Professor, Leiden University",
     titleZh: "莱顿大学副教授",
     bio: "Studies generative and conversational information retrieval, language models, and agents for complex information needs.",
@@ -37,7 +37,7 @@ const people = [
     photo: "/conference/zhaochun-ren.jpeg", url: "https://renzhaochun.github.io/",
   },
   {
-    name: "Xi Zhang", nameZh: "张曦", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Xi Zhang", nameZh: "张曦",
     title: "PhD Researcher, University of Glasgow",
     titleZh: "格拉斯哥大学博士研究生",
     bio: "Builds self-evolving agents and automated research systems that learn alongside human scientists.",
@@ -45,7 +45,7 @@ const people = [
     photo: "/team/xi.webp", url: "https://x-izhang.github.io/",
   },
   {
-    name: "Zhaohan Meng", nameZh: "孟昭含", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Zhaohan Meng", nameZh: "孟昭含",
     title: "PhD Researcher, University of Glasgow · Visiting Research Scholar, Harvard Medical School",
     titleZh: "格拉斯哥大学博士研究生 · 哈佛医学院访问研究学者",
     bio: "Studies scientific agents, biomedical AI, and knowledge-driven approaches to drug discovery.",
@@ -53,7 +53,7 @@ const people = [
     photo: "/conference/zhaohan-meng.jpg", url: "https://zhaohanm.github.io/",
   },
   {
-    name: "Qiang Zhang", nameZh: "张强", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Qiang Zhang", nameZh: "张强",
     title: "Assistant Professor, Zhejiang University",
     titleZh: "浙江大学国际联合学院长聘教轨助理教授",
     bio: "Studies large models, agents, knowledge graphs, and AI for molecular and protein research.",
@@ -61,7 +61,7 @@ const people = [
     photo: "/conference/qiang-zhang.jpg", url: "https://person.zju.edu.cn/zhangqiang",
   },
   {
-    name: "Fajie Yuan", nameZh: "原发杰", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Fajie Yuan", nameZh: "原发杰",
     title: "Assistant Professor, Westlake University",
     titleZh: "西湖大学助理教授",
     bio: "Develops protein language models and AI methods for life science.",
@@ -69,7 +69,7 @@ const people = [
     photo: "/conference/fajie-yuan.jpg", url: "https://en.westlake.edu.cn/faculty/fajie-yuan.html",
   },
   {
-    name: "Peijie Zhou", nameZh: "周沛劼", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Peijie Zhou", nameZh: "周沛劼",
     title: "Assistant Professor, Peking University",
     titleZh: "北京大学助理教授",
     bio: "Studies computational systems biology and single-cell models of complex biological systems.",
@@ -77,7 +77,7 @@ const people = [
     photo: "/conference/peijie-zhou.jpg", url: "https://www.aais.pku.edu.cn/info/1653/3721.htm",
   },
   {
-    name: "Zhikang Wang", nameZh: "王智康", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Zhikang Wang", nameZh: "王智康",
     title: "Assistant Professor, Fudan University",
     titleZh: "复旦大学助理教授",
     bio: "Works on spatial omics and computational pathology.",
@@ -85,7 +85,7 @@ const people = [
     photo: "/conference/zhikang-wang.jpg", url: "https://faculty.fudan.edu.cn/WangZhikang/zh_CN/index.htm#skxx",
   },
   {
-    name: "Xiao Wang", nameZh: "王晓", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Xiao Wang", nameZh: "王晓",
     title: "Lecturer, University of International Business and Economics",
     titleZh: "对外经济贸易大学讲师",
     bio: "Works on information retrieval, retrieval-augmented generation, and natural language processing.",
@@ -93,7 +93,7 @@ const people = [
     photo: "/conference/xiao-wang.jpg", url: "https://saids.uibe.edu.cn/szdw/zzjs/rgznx/bbcda9b87835473c834d39bd0bb39849.htm",
   },
   {
-    name: "Siwei Liu", nameZh: "刘思危", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Siwei Liu", nameZh: "刘思危",
     title: "Assistant Professor, University of Aberdeen",
     titleZh: "阿伯丁大学助理教授",
     bio: "Studies LLM multi-agent collaboration and biomedical graph learning.",
@@ -101,7 +101,7 @@ const people = [
     photo: "/team/siwei.webp", url: "https://tedsiweiliu.github.io/",
   },
   {
-    name: "Haibin Ling", nameZh: "凌海滨", role: "Invited Speaker", roleZh: "特邀报告嘉宾",
+    name: "Haibin Ling", nameZh: "凌海滨",
     title: "Chair Professor · IEEE Fellow, Westlake University",
     titleZh: "西湖大学讲席教授、IEEE Fellow",
     bio: "Studies computer vision, medical image analysis, and AI for Science.",
@@ -203,15 +203,14 @@ export default function Conference() {
           </div>
           <a href="/index.html">{t("Visit ANative Lab", "访问 ANative Lab")}<span aria-hidden="true">↗</span></a>
         </div>
+        <h3 className="conference-speaker-label">{t("Invited Speakers", "特邀报告嘉宾")}</h3>
         <div className="conference-people-list">
           {orderedPeople.map(person => <article className="conference-person" key={person.name}>
             <img className="conference-person-photo" src={person.photo} width="112" height="112" alt={t(`Portrait of ${person.name}`, `${person.nameZh}的照片`)} loading="lazy" />
             <div className="conference-person-info">
               <div className="conference-person-heading">
-                <h3><a href={person.url} target="_blank" rel="noopener noreferrer">{zh ? person.nameZh : person.name}<span aria-hidden="true">↗</span></a></h3>
-                <span className="conference-person-role">{zh ? person.roleZh : person.role}</span>
+                <h3><a href={person.url} target="_blank" rel="noopener noreferrer">{zh ? person.nameZh : person.name}</a></h3>
               </div>
-              {person.name !== person.nameZh && <p className="conference-person-secondary">{zh ? person.name : person.nameZh}</p>}
               <p className="conference-person-title">{zh ? person.titleZh : person.title}</p>
               <p className="conference-person-bio">{zh ? person.bioZh : person.bio}</p>
             </div>
