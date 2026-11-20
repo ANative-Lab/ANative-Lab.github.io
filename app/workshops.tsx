@@ -2,6 +2,8 @@
 
 import "./workshops.css";
 
+const registrationUrl = "https://www.wjx.top/vm/tN65GTj.aspx";
+
 const topics = [
   { number: "01", en: "Scientific knowledge and retrieval", zh: "科学知识与检索", detailEn: "Finding, organizing, and using research knowledge across complex tasks.", detailZh: "在复杂科研任务中获取、组织和使用知识。" },
   { number: "02", en: "Collaboration and self-evolution", zh: "协同与自进化", detailEn: "How multiple agents coordinate, reflect, and learn from research experience.", detailZh: "探索多智能体如何协作、反思并积累研究经验。" },
@@ -42,7 +44,7 @@ export default function WorkshopsPreview({zh}: {zh: boolean}) {
           <div><dt>{zh ? "日期" : "DATE"}</dt><dd>{zh ? "2026年12月21日" : "21 December 2026"}</dd></div>
           <div><dt>{zh ? "会场" : "VENUE"}</dt><dd>{zh ? "华中科技大学，武汉" : "Huazhong University of Science and Technology, Wuhan"}</dd></div>
           <div><dt>{zh ? "嘉宾" : "SPEAKERS"}</dt><dd>{zh ? "待定" : "To be confirmed"}</dd></div>
-          <div><dt>{zh ? "报名" : "REGISTRATION"}</dt><dd>{zh ? "待开放" : "Not open yet"}</dd></div>
+          <div><dt>{zh ? "报名" : "REGISTRATION"}</dt><dd><a className="workshop-registration-link" href={registrationUrl} target="_blank" rel="noopener noreferrer">{zh ? "立即报名" : "Register now"}<span aria-hidden="true">↗</span></a></dd></div>
         </dl>
       </article>
 

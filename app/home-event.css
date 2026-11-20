@@ -21,6 +21,8 @@
 .home-event-person strong{font-size:17px;color:#143c2a}
 .home-event-person small{margin-top:5px;color:#526e5e;font-size:13px}
 .home-event-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px}
+.home-event a.home-event-register{background:#a5e0b7;color:#0a241b}
+.home-event a.home-event-register:hover,.home-event a.home-event-register:focus-visible{background:#d0f0d7}
 .home-event a.home-event-poster{background:transparent;color:#126b46;border:1px solid #80a996}
 .home-event a.home-event-poster:hover,.home-event a.home-event-poster:focus-visible{background:#d5e8da}
 @media(max-width:900px){.site-v2 .hero-v2{min-height:500px;height:60svh}.site-v2 .hero-v2 h1{font-size:52px}}

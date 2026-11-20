@@ -46,7 +46,8 @@ test("workshop preview marks unconfirmed logistics and speakers as pending", asy
   assert.match(preview, /ANative 2026 Workshop/);
   assert.match(preview, /Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery/);
   assert.match(preview, /To be confirmed/);
-  assert.match(preview, /Not open yet/);
+  assert.match(preview, /https:\/\/www\.wjx\.top\/vm\/tN65GTj\.aspx/);
+  assert.match(preview, /Register now/);
   assert.doesNotMatch(preview, /Ke Yuan|Zhaochun Ren|Iadh Ounis|Jeff Z\. Pan/);
 });
 
@@ -74,7 +75,9 @@ test("workshop links to a standalone conference preview with local portraits", a
   assert.match(conference, /className="conference-organizer"/);
   assert.match(conference, /<strong>ANative Lab<\/strong>/);
   assert.match(conference, /<a href="\/index\.html">\{t\("Visit ANative Lab", "访问 ANative Lab"\)\}/);
-  assert.match(conference, /Not open yet/);
+  assert.match(conference, /https:\/\/www\.wjx\.top\/vm\/tN65GTj\.aspx/);
+  assert.match(conference, /Register for the workshop/);
+  assert.match(page, /className="home-event-register"/);
   for (const file of ["iadh-ounis.jpg", "ke-yuan.jpg", "zhaochun-ren.jpeg", "zhaohan-meng.jpg", "qiang-zhang.jpg", "fajie-yuan.jpg", "peijie-zhou.jpg", "zhikang-wang.jpg", "xiao-wang.jpg", "haibin-ling.jpg"]) {
     await access(new URL(`../dist-pages/conference/${file}`, import.meta.url));
   }

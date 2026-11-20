@@ -31,6 +31,8 @@ body{margin:0;background:#f8faf7}
 .conference-facts>div:last-child{border-right:0}
 .conference-facts dt{color:#5d7867;font-size:11px;font-weight:700}
 .conference-facts dd{margin:6px 0 0;color:#18342c;font-size:14px;font-weight:700}
+.conference-registration-link{color:#236644;text-decoration:underline;text-underline-offset:3px}
+.conference-registration-link span{color:#a55e3e}
 .conference-overview{display:grid;grid-template-columns:210px minmax(0,1fr);gap:40px;width:min(100% - 64px,1200px);margin:0 auto;padding:44px 0 50px}
 .conference-section-head h2,.conference-people-intro h2,.conference-attend h2{margin:0;font:600 29px/1.25 "Space Grotesk",Arial,sans-serif}
 .conference-overview-body>p{max-width:780px;margin:0 0 18px;color:#435e51;font-size:15px;line-height:1.65}
@@ -68,7 +70,10 @@ body{margin:0;background:#f8faf7}
 .conference-programme-note p{max-width:440px;margin:9px 0 0;color:#567063;font-size:14px;line-height:1.65}
 .conference-attend{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:55px;padding:52px max(32px,calc((100vw - 1200px)/2)) 58px;background:#f8faf7}
 .conference-attend-title>p:first-child{margin:0 0 13px;color:#b45c3a;font-size:13px;font-weight:700}
-.conference-attend-title>p:last-child{max-width:430px;margin:16px 0 0;color:#567063;font-size:14px;line-height:1.65}
+.conference-attend-title>p:not(:first-child){max-width:430px;margin:16px 0 0;color:#567063;font-size:14px;line-height:1.65}
+.conference-registration-button{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:11px 15px;border:1px solid #2e704e;border-radius:4px;background:#174a35;color:#f7fbf6!important;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+.conference-registration-button:hover{background:#286548}
+.conference-registration-button span{color:#b7e1c2}
 .conference-attend-facts{margin:0;border-top:1px solid var(--conf-line)}
 .conference-attend-facts>div{display:grid;grid-template-columns:125px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--conf-line)}
 .conference-attend-facts dt{color:#5d7867;font-size:13px}
