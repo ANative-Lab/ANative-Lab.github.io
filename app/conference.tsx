@@ -16,8 +16,8 @@ const people = [
   },
   {
     name: "Iadh Ounis", nameZh: "Iadh Ounis",
-    title: "Professor of Information Retrieval · Head of School of Computing Science, University of Glasgow",
-    titleZh: "格拉斯哥大学信息检索教授、计算机科学学院院长",
+    title: "Head of School of Computing Science · Professor of Information Retrieval, University of Glasgow",
+    titleZh: "格拉斯哥大学计算机科学学院院长、信息检索教授",
     bio: "Works on information retrieval, recommender systems, and large-scale search, including the Terrier research platform.",
     bioZh: "研究信息检索、推荐系统和大规模搜索技术，领导 Terrier 研究团队。",
     photo: "/conference/iadh-ounis.jpg", url: "https://www.gla.ac.uk/schools/computing/staff/iadhounis/",
@@ -171,7 +171,7 @@ export default function Conference() {
           <p className="conference-edition">ANative Lab · 2026</p>
           <h1 id="conference-title">{zh ? <>ANative <span>学术研讨会</span></> : "ANative Workshop"}</h1>
           <p className="conference-hero-theme">{t("Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery", "智能体原生科研：多智能体协同与科学发现")}</p>
-          <a className="conference-hero-link" href="#people">{t("Meet the participants", "了解参会人员")} <span aria-hidden="true">↘</span></a>
+          <a className="conference-hero-link" href="#people">{t("Meet the participants", "了解参会人员")}</a>
         </div>
       </section>
 
@@ -179,7 +179,7 @@ export default function Conference() {
         <div><dt>{t("Date", "日期")}</dt><dd>{t("21 December 2026", "2026年12月21日")}</dd></div>
         <div><dt>{t("Venue", "地点")}</dt><dd>{t("Huazhong University of Science and Technology, Wuhan", "华中科技大学，武汉")}</dd></div>
         <div><dt>{t("Format", "形式")}</dt><dd>{t("Academic workshop", "学术研讨会")}</dd></div>
-        <div><dt>{t("Registration", "报名")}</dt><dd><a className="conference-registration-link" href={registrationUrl} target="_blank" rel="noopener noreferrer">{t("Register now", "立即报名")} <span aria-hidden="true">↗</span></a></dd></div>
+        <div><dt>{t("Registration", "报名")}</dt><dd><a className="conference-registration-link" href={registrationUrl} target="_blank" rel="noopener noreferrer">{t("Register now", "立即报名")}</a></dd></div>
       </section>
 
       <section className="conference-overview" id="overview" aria-labelledby="conference-overview-title">
@@ -203,7 +203,7 @@ export default function Conference() {
             <span>{t("Organized by", "主办方")}</span>
             <strong>ANative Lab</strong>
           </div>
-          <a href="/index.html">{t("Visit ANative Lab", "访问 ANative Lab")}<span aria-hidden="true">↗</span></a>
+          <a href="/index.html">{t("Visit ANative Lab", "访问 ANative Lab")}</a>
         </div>
         <h3 className="conference-speaker-label">{t("Invited Speakers", "特邀报告嘉宾")}</h3>
         <div className="conference-people-list">
@@ -232,11 +232,11 @@ export default function Conference() {
       </section>
 
       <section className="conference-attend" id="attend" aria-labelledby="conference-attend-title">
-        <div className="conference-attend-title"><p>{t("Attend", "参会")}</p><h2 id="conference-attend-title">{t("Plan to join the conversation.", "期待与你现场交流。")}</h2><p>{t("Complete the registration form to join us.", "填写报名表，预约参会。")}</p><a className="conference-registration-button" href={registrationUrl} target="_blank" rel="noopener noreferrer">{t("Register for the workshop", "报名参加研讨会")} <span aria-hidden="true">↗</span></a></div>
+        <div className="conference-attend-title"><p>{t("Attend", "参会")}</p><h2 id="conference-attend-title">{t("Plan to join the conversation.", "期待与你现场交流。")}</h2><p>{t("Complete the registration form to join us.", "填写报名表，预约参会。")}</p><a className="conference-registration-button" href={registrationUrl} target="_blank" rel="noopener noreferrer">{t("Register for the workshop", "报名参加研讨会")}</a></div>
         <dl className="conference-attend-facts">
           <div><dt>{t("Date", "日期")}</dt><dd>{t("21 December 2026", "2026年12月21日")}</dd></div>
           <div><dt>{t("Venue", "地点")}</dt><dd>{t("Huazhong University of Science and Technology, Wuhan", "华中科技大学，武汉")}</dd></div>
-          <div><dt>{t("Contact", "联系")}</dt><dd>{t("To be announced", "待公布")}</dd></div>
+          <div><dt>{t("Contact", "联系")}</dt><dd><a className="conference-contact-link" href="mailto:2026612226@hust.edu.cn">2026612226@hust.edu.cn</a></dd></div>
         </dl>
       </section>
     </main>

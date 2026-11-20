@@ -23,7 +23,7 @@ body{margin:0;background:#f8faf7}
 .conference-hero h1{max-width:850px;margin:0;font:600 48px/1.1 "Space Grotesk",Arial,sans-serif;overflow-wrap:break-word}
 .conference-hero h1 span{white-space:nowrap}
 .conference-hero-theme{max-width:810px;margin:14px 0 0;color:#c0e2c9;font:500 23px/1.4 "Space Grotesk",Arial,sans-serif}
-.conference-hero-link{display:inline-flex;gap:8px;align-items:center;margin-top:21px;color:#f2ae8a;font-size:13px;font-weight:700;text-decoration:none}
+.conference-hero-link{display:inline-flex;align-items:center;margin-top:21px;color:#f2ae8a;font-size:13px;font-weight:700;text-decoration:none}
 .conference-hero-link:hover{text-decoration:underline;text-underline-offset:4px}
 .conference-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;padding:0 max(32px,calc((100vw - 1200px)/2));background:#eaf2eb;border-bottom:1px solid var(--conf-line)}
 .conference-facts>div{min-width:0;padding:15px 24px 16px 0;border-right:1px solid #cbdccf}
@@ -32,7 +32,6 @@ body{margin:0;background:#f8faf7}
 .conference-facts dt{color:#5d7867;font-size:11px;font-weight:700}
 .conference-facts dd{margin:6px 0 0;color:#18342c;font-size:14px;font-weight:700}
 .conference-registration-link{color:#236644;text-decoration:underline;text-underline-offset:3px}
-.conference-registration-link span{color:#a55e3e}
 .conference-overview{display:grid;grid-template-columns:210px minmax(0,1fr);gap:40px;width:min(100% - 64px,1200px);margin:0 auto;padding:44px 0 50px}
 .conference-section-head h2,.conference-people-intro h2,.conference-attend h2{margin:0;font:600 29px/1.25 "Space Grotesk",Arial,sans-serif}
 .conference-overview-body>p{max-width:780px;margin:0 0 18px;color:#435e51;font-size:15px;line-height:1.65}
@@ -48,7 +47,6 @@ body{margin:0;background:#f8faf7}
 .conference-organizer-name strong{font:600 25px/1.2 "Space Grotesk",Arial,sans-serif}
 .conference-organizer a{margin-left:auto;color:#28573e;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
 .conference-organizer a:hover{text-decoration:underline;text-underline-offset:4px}
-.conference-organizer a span{margin-left:8px;color:#a55e3e;font-size:16px}
 .conference-speaker-label{display:flex;align-items:center;gap:18px;margin:30px 0 0;padding:0 0 16px;border-bottom:2px solid #a9c5af;color:#174a35;font-size:24px;font-weight:700;line-height:1.3}
 .conference-speaker-label::after{height:1px;flex:1;background:#c6d6ca;content:""}
 .conference-people-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;border-top:0}
@@ -73,7 +71,8 @@ body{margin:0;background:#f8faf7}
 .conference-attend-title>p:not(:first-child){max-width:430px;margin:16px 0 0;color:#567063;font-size:14px;line-height:1.65}
 .conference-registration-button{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:11px 15px;border:1px solid #2e704e;border-radius:4px;background:#174a35;color:#f7fbf6!important;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
 .conference-registration-button:hover{background:#286548}
-.conference-registration-button span{color:#b7e1c2}
+.conference-contact-link{color:inherit;text-decoration:underline;text-decoration-color:#9bb9a5;text-underline-offset:3px}
+.conference-contact-link:hover{color:#236644}
 .conference-attend-facts{margin:0;border-top:1px solid var(--conf-line)}
 .conference-attend-facts>div{display:grid;grid-template-columns:125px minmax(0,1fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--conf-line)}
 .conference-attend-facts dt{color:#5d7867;font-size:13px}
