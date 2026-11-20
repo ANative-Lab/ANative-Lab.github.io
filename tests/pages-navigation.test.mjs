@@ -45,7 +45,8 @@ test("workshop preview marks unconfirmed logistics and speakers as pending", asy
   const preview = await readFile(new URL("../app/workshops.tsx", import.meta.url), "utf8");
   assert.match(preview, /ANative 2026 Workshop/);
   assert.match(preview, /Agent-Native Research: Multi-Agent Collaboration for Scientific Discovery/);
-  assert.match(preview, /To be confirmed/);
+  assert.doesNotMatch(preview, /SPEAKERS|嘉宾/);
+  assert.doesNotMatch(preview, /↗|↘/);
   assert.match(preview, /https:\/\/www\.wjx\.top\/vm\/tN65GTj\.aspx/);
   assert.match(preview, /Register now/);
   assert.doesNotMatch(preview, /Ke Yuan|Zhaochun Ren|Iadh Ounis|Jeff Z\. Pan/);
@@ -69,7 +70,7 @@ test("workshop links to a standalone conference preview with local portraits", a
   assert.match(conference, /name: "Zaiqiao Meng", nameZh: "蒙在桥"/);
   assert.match(conference, /<h3 className="conference-speaker-label">\{t\("Invited Speakers", "特邀报告嘉宾"\)\}<\/h3>/);
   assert.doesNotMatch(conference, /className="conference-person-(?:role|secondary)"/);
-  assert.match(conference, /Head of School of Computing Science, University of Glasgow/);
+  assert.match(conference, /Head of School of Computing Science · Professor of Information Retrieval, University of Glasgow/);
   assert.match(conference, /Chair Professor · IEEE Fellow, Westlake University/);
   assert.match(conference, /Huazhong University of Science and Technology, Wuhan/);
   assert.match(conference, /className="conference-organizer"/);
