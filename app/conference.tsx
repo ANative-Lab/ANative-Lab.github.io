@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import "./conference.css";
 
+const registrationUrl = "https://www.wjx.top/vm/tN65GTj.aspx";
+
 const people = [
   {
     name: "Zaiqiao Meng", nameZh: "蒙在桥",
@@ -177,7 +179,7 @@ export default function Conference() {
         <div><dt>{t("Date", "日期")}</dt><dd>{t("21 December 2026", "2026年12月21日")}</dd></div>
         <div><dt>{t("Venue", "地点")}</dt><dd>{t("Huazhong University of Science and Technology, Wuhan", "华中科技大学，武汉")}</dd></div>
         <div><dt>{t("Format", "形式")}</dt><dd>{t("Academic workshop", "学术研讨会")}</dd></div>
-        <div><dt>{t("Registration", "报名")}</dt><dd>{t("Not open yet", "暂未开放")}</dd></div>
+        <div><dt>{t("Registration", "报名")}</dt><dd><a className="conference-registration-link" href={registrationUrl} target="_blank" rel="noopener noreferrer">{t("Register now", "立即报名")} <span aria-hidden="true">↗</span></a></dd></div>
       </section>
 
       <section className="conference-overview" id="overview" aria-labelledby="conference-overview-title">
@@ -230,7 +232,7 @@ export default function Conference() {
       </section>
 
       <section className="conference-attend" id="attend" aria-labelledby="conference-attend-title">
-        <div className="conference-attend-title"><p>{t("Attend", "参会")}</p><h2 id="conference-attend-title">{t("Plan to join the conversation.", "期待与你现场交流。")}</h2><p>{t("We will share the final programme and participation details here as they are confirmed.", "会议议程与参会方式确认后将在此更新。")}</p></div>
+        <div className="conference-attend-title"><p>{t("Attend", "参会")}</p><h2 id="conference-attend-title">{t("Plan to join the conversation.", "期待与你现场交流。")}</h2><p>{t("Complete the registration form to join us.", "填写报名表，预约参会。")}</p><a className="conference-registration-button" href={registrationUrl} target="_blank" rel="noopener noreferrer">{t("Register for the workshop", "报名参加研讨会")} <span aria-hidden="true">↗</span></a></div>
         <dl className="conference-attend-facts">
           <div><dt>{t("Date", "日期")}</dt><dd>{t("21 December 2026", "2026年12月21日")}</dd></div>
           <div><dt>{t("Venue", "地点")}</dt><dd>{t("Huazhong University of Science and Technology, Wuhan", "华中科技大学，武汉")}</dd></div>

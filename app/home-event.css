@@ -14,13 +14,15 @@
 .home-event a:hover,.home-event a:focus-visible{background:#084d32;text-decoration:underline}
 .home-event-featured{grid-column:1/-1;border-top:1px solid #b7cfbf;padding-top:24px}
 .home-event-featured-label{margin-bottom:16px;color:#167148;font-size:12px;font-weight:700;letter-spacing:.06em}
-.home-event-featured-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.home-event-featured-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .home-event-person{display:flex;align-items:center;gap:15px;min-width:0}
 .home-event-person img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;border:1px solid #9acbb1}
 .home-event-person strong,.home-event-person small{display:block;line-height:1.35}
 .home-event-person strong{font-size:17px;color:#143c2a}
 .home-event-person small{margin-top:5px;color:#526e5e;font-size:13px}
 .home-event-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px}
+.home-event a.home-event-register{background:#a5e0b7;color:#0a241b}
+.home-event a.home-event-register:hover,.home-event a.home-event-register:focus-visible{background:#d0f0d7}
 .home-event a.home-event-poster{background:transparent;color:#126b46;border:1px solid #80a996}
 .home-event a.home-event-poster:hover,.home-event a.home-event-poster:focus-visible{background:#d5e8da}
 @media(max-width:900px){.site-v2 .hero-v2{min-height:500px;height:60svh}.site-v2 .hero-v2 h1{font-size:52px}}
